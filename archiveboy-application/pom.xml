@@ -23,7 +23,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.broodlab.archiveboy.ui.ArchiveBoyUi</mainClass>
+                            <mainClass>org.broodlab.archiveboy.application.ArchiveBoyApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -54,6 +54,14 @@
             <groupId>org.broodlab.archiveboy.ui</groupId>
             <artifactId>archiveboy-ui</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
 
