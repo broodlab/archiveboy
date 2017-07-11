@@ -10,17 +10,12 @@
     </parent>
 
     <groupId>org.broodlab.archiveboy.ui</groupId>
-    <artifactId>archiveboy-ui</artifactId>
+    <artifactId>archiveboy-ui-main-menu</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-main-menu</artifactId>
+            <artifactId>archiveboy-common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

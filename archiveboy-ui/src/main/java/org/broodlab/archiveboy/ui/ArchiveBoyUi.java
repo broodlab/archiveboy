@@ -1,19 +1,22 @@
 package org.broodlab.archiveboy.ui;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.broodlab.archiveboy.ui.common.ArchiveBoyFxmlLoaderFactory;
+
+import java.io.IOException;
 
 public class ArchiveBoyUi extends Application {
 
     private Parent rootNode;
 
-    public void init() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ArchiveBoy.fxml"));
-        fxmlLoader.setControllerFactory(ArchiveBoyContextHolder.getArchiveBoyContext()::getBean);
-        rootNode = fxmlLoader.load();
+    public void init() throws IOException {
+        ArchiveBoyFxmlLoaderFactory archiveBoyFxmlLoaderFactory = ArchiveBoyContextHolder
+                .getArchiveBoyContext()
+                .getBean(ArchiveBoyFxmlLoaderFactory.class);
+        rootNode = archiveBoyFxmlLoaderFactory.createApplicationFxmlLoader(getClass(), "/ArchiveBoy.fxml").load();
     }
 
     public void start(Stage primaryStage) throws Exception {

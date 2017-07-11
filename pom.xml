@@ -16,6 +16,8 @@
     <modules>
         <module>archiveboy-application</module>
         <module>archiveboy-ui</module>
+        <module>archiveboy-ui/common</module>
+        <module>archiveboy-ui/main-menu</module>
     </modules>
 
     <dependencyManagement>

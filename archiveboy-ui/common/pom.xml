@@ -10,18 +10,16 @@
     </parent>
 
     <groupId>org.broodlab.archiveboy.ui</groupId>
-    <artifactId>archiveboy-ui</artifactId>
+    <artifactId>archiveboy-ui-common</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-main-menu</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
 
