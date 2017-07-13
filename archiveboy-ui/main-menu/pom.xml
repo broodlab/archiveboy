@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-common</artifactId>
+            <artifactId>archiveboy-ui-common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
