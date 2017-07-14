@@ -9,9 +9,9 @@
     <children>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
-                <Menu mnemonicParsing="false" text="Program">
+                <Menu mnemonicParsing="false" text="%program">
                     <items>
-                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Close"/>
+                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="%program.close"/>
                     </items>
                 </Menu>
             </menus>

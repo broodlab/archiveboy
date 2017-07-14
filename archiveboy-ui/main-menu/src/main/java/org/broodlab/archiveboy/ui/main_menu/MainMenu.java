@@ -33,7 +33,7 @@ public class MainMenu extends VBox {
     @PostConstruct
     public void init() throws IOException {
         archiveBoyFxmlLoaderFactory
-                .createUiComponentFxmlLoader(getClass(), this, "/MainMenu.fxml")
+                .createUiComponentFxmlLoader(this, "/MainMenu.fxml", "texts")
                 .load();
 
         JavaFxObservable

@@ -29,7 +29,7 @@ public class ArchiveBoyUi extends Application {
     }
 
     public void init() throws IOException {
-        rootNode = archiveBoyFxmlLoaderFactory.createApplicationFxmlLoader(getClass(), "/ArchiveBoy.fxml").load();
+        rootNode = archiveBoyFxmlLoaderFactory.createApplicationFxmlLoader(this, "/ArchiveBoy.fxml").load();
         onLaunched();
         onClosed();
     }

@@ -6,12 +6,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 @Component
 public class ArchiveBoyFxmlLoaderFactory {
 
-    ApplicationContext archiveBoyContext;
-    ArchiveBoyUiComponentBuilderFactory archiveBoyUiComponentBuilderFactory;
+    private ApplicationContext archiveBoyContext;
+    private ArchiveBoyUiComponentBuilderFactory archiveBoyUiComponentBuilderFactory;
 
     @Autowired
     public ArchiveBoyFxmlLoaderFactory(ApplicationContext archiveBoyContext,
@@ -20,21 +21,24 @@ public class ArchiveBoyFxmlLoaderFactory {
         this.archiveBoyUiComponentBuilderFactory = archiveBoyUiComponentBuilderFactory;
     }
 
-    public FXMLLoader createApplicationFxmlLoader(Class source, String fxmlFilePath) throws IOException {
+    public FXMLLoader createApplicationFxmlLoader(Object applicationInstance, String fxmlFilePath) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(source.getResource(fxmlFilePath));
+        FXMLLoader fxmlLoader = new FXMLLoader(applicationInstance.getClass().getResource(fxmlFilePath));
         fxmlLoader.setBuilderFactory(archiveBoyUiComponentBuilderFactory);
         fxmlLoader.setControllerFactory(archiveBoyContext::getBean);
 
         return fxmlLoader;
     }
 
-    public FXMLLoader createUiComponentFxmlLoader(Class source, Object instance, String fxmlFilePath) throws IOException {
+    public FXMLLoader createUiComponentFxmlLoader(Object componentInstance,
+                                                  String fxmlFilePath,
+                                                  String resourceBundleName) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(source.getResource(fxmlFilePath));
+        FXMLLoader fxmlLoader = new FXMLLoader(componentInstance.getClass().getResource(fxmlFilePath));
         fxmlLoader.setBuilderFactory(archiveBoyUiComponentBuilderFactory);
-        fxmlLoader.setRoot(instance);
-        fxmlLoader.setController(instance);
+        fxmlLoader.setRoot(componentInstance);
+        fxmlLoader.setController(componentInstance);
+        fxmlLoader.setResources(ResourceBundle.getBundle(resourceBundleName));
 
         return fxmlLoader;
     }
