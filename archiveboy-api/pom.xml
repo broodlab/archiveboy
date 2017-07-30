@@ -9,21 +9,13 @@
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.broodlab.archiveboy.ui</groupId>
-    <artifactId>archiveboy-ui</artifactId>
+    <groupId>org.broodlab.archiveboy.api</groupId>
+    <artifactId>archiveboy-api</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-main-menu</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>settings</module>
+    </modules>
 
     <build>
         <plugins>
