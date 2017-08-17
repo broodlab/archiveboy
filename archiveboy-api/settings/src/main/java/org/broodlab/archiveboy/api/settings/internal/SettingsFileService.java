@@ -4,6 +4,7 @@ import org.broodlab.archiveboy.api.settings.ISettingsService;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
@@ -28,7 +29,9 @@ public class SettingsFileService implements ISettingsService {
                 settings = initDefaultSettings(settingsFile);
             } else {
                 settings = new Properties();
-                settings.load(new FileInputStream(settingsFile.getFile()));
+                try (InputStream settingsFileInputStream = new FileInputStream(settingsFile.getFile())) {
+                    settings.load(settingsFileInputStream);
+                }
             }
         } catch (Exception exception) {
             throw (new RuntimeException(exception));
@@ -47,6 +50,7 @@ public class SettingsFileService implements ISettingsService {
         try (FileOutputStream settingsFileOutputStream = new FileOutputStream(settingsFile.getFile())) {
             settings.store(settingsFileOutputStream, null);
         }
+
         return settings;
     }
 }

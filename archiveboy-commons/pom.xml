@@ -7,19 +7,15 @@
         <groupId>org.broodlab.archiveboy</groupId>
         <artifactId>archiveboy</artifactId>
         <version>0.1.0-SNAPSHOT</version>
-        <relativePath>../..</relativePath>
     </parent>
 
-    <groupId>org.broodlab.archiveboy.ui</groupId>
-    <artifactId>archiveboy-ui-main-menu</artifactId>
+    <groupId>org.broodlab.archiveboy.commons</groupId>
+    <artifactId>archiveboy-commons</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>test-tools</module>
+    </modules>
 
     <build>
         <plugins>

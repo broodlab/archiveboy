@@ -9,16 +9,18 @@
     <version>0.1.0-SNAPSHOT</version>
 
     <properties>
+        <groovy.version>2.4.12</groovy.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
     </properties>
 
     <modules>
         <module>archiveboy-application</module>
+        <module>archiveboy-commons</module>
         <module>archiveboy-api</module>
         <module>archiveboy-ui</module>
-        <module>archiveboy-ui/common</module>
-        <module>archiveboy-ui/main-menu</module>
+        <module>archiveboy-ui/common/</module>
+        <module>archiveboy-ui/main-menu/</module>
     </modules>
 
     <dependencyManagement>
@@ -69,7 +71,7 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>2.4.12</version>
+            <version>${groovy.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

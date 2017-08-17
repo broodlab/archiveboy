@@ -11,10 +11,11 @@ import static java.nio.file.Files.*
 import static org.apache.commons.io.FileUtils.deleteDirectory
 import static org.apache.commons.io.FileUtils.readFileToString
 import static org.broodlab.archiveboy.api.settings.internal.Defaults.SETTINGS_FILE_NAME
+import static org.broodlab.archiveboy.commons.test_tools.test_folder.TestFolder.createTestFolderPathFromClass
 
 class SettingsFileCreatorSpec extends Specification {
 
-    Path baseFolderPath = Paths.get("src/test/resources/${SettingsFileCreatorSpec.class.getName()}")
+    Path baseFolderPath = createTestFolderPathFromClass(SettingsFileCreatorSpec.class)
 
     def setup() {
         createDirectory(baseFolderPath)

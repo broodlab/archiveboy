@@ -4,20 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.broodlab.archiveboy</groupId>
-        <artifactId>archiveboy</artifactId>
+        <groupId>org.broodlab.archiveboy.commons</groupId>
+        <artifactId>archiveboy-commons</artifactId>
         <version>0.1.0-SNAPSHOT</version>
-        <relativePath>../..</relativePath>
     </parent>
 
-    <groupId>org.broodlab.archiveboy.ui</groupId>
-    <artifactId>archiveboy-ui-main-menu</artifactId>
+    <groupId>org.broodlab.archiveboy.commons</groupId>
+    <artifactId>test-tools</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy.version}</version>
         </dependency>
     </dependencies>
 
