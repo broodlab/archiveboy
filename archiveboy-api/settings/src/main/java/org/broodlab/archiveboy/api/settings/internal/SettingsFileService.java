@@ -1,6 +1,7 @@
 package org.broodlab.archiveboy.api.settings.internal;
 
 import org.broodlab.archiveboy.api.settings.ISettingsService;
+import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,6 +13,7 @@ import java.util.Properties;
 import static org.broodlab.archiveboy.api.settings.internal.Defaults.WORKSPACE_FOLDER_NAME;
 import static org.broodlab.archiveboy.api.settings.internal.Defaults.WORKSPACE_PATH__SETTING_NAME;
 
+@Component
 public class SettingsFileService implements ISettingsService {
 
     private SettingsFileCreator settingsFileCreator;

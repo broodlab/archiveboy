@@ -4,19 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.broodlab.archiveboy</groupId>
-        <artifactId>archiveboy</artifactId>
+        <groupId>org.broodlab.archiveboy.api</groupId>
+        <artifactId>archiveboy-api</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>org.broodlab.archiveboy.api</groupId>
-    <artifactId>archiveboy-api</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>settings</module>
-        <module>workspace</module>
-    </modules>
+    <artifactId>archiveboy-api-workspace</artifactId>
 
     <build>
         <plugins>

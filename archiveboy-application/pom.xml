@@ -14,6 +14,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.broodlab.archiveboy.api</groupId>
+            <artifactId>archiveboy-api-settings</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.broodlab.archiveboy.api</groupId>
+            <artifactId>archiveboy-api-workspace</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.broodlab.archiveboy.ui</groupId>
             <artifactId>archiveboy-ui</artifactId>
             <version>${project.version}</version>

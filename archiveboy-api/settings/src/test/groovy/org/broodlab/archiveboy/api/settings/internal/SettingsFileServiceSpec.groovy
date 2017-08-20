@@ -1,5 +1,6 @@
 package org.broodlab.archiveboy.api.settings.internal
 
+import org.mockito.Mockito
 import spock.lang.Specification
 
 import java.nio.file.Path
@@ -16,9 +17,13 @@ import static org.broodlab.archiveboy.commons.test_tools.test_folder.TestFolder.
 class SettingsFileServiceSpec extends Specification {
 
     Path baseFolderPath = createTestFolderPathFromClass(SettingsFileServiceSpec.class)
+    IBaseFolderPathProvider baseFolderPathProvider
 
     def setup() {
         createDirectory(baseFolderPath)
+        baseFolderPathProvider = Mockito.mock(IBaseFolderPathProvider.class)
+        Mockito.when(baseFolderPathProvider.provideBaseFolderPath())
+                .thenReturn(baseFolderPath)
     }
 
     def cleanup() {
@@ -27,7 +32,7 @@ class SettingsFileServiceSpec extends Specification {
 
     def "By default the 'workspace.path' setting is initialized with a path within the user's home folder."() {
         given:
-        SettingsFileCreator settingsFileCreator = new SettingsFileCreator(baseFolderPath)
+        SettingsFileCreator settingsFileCreator = new SettingsFileCreator(baseFolderPathProvider)
         SettingsFileService testee = new SettingsFileService(settingsFileCreator)
         testee.init()
 
@@ -44,7 +49,7 @@ class SettingsFileServiceSpec extends Specification {
         createFile(settingsFilePath)
         write(settingsFilePath.toFile(), "${WORKSPACE_PATH__SETTING_NAME}=/foo/bar/.baz", defaultCharset())
 
-        SettingsFileCreator settingsFileCreator = new SettingsFileCreator(baseFolderPath)
+        SettingsFileCreator settingsFileCreator = new SettingsFileCreator(baseFolderPathProvider)
         SettingsFileService testee = new SettingsFileService(settingsFileCreator)
         testee.init()
 
