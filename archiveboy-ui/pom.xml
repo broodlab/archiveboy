@@ -11,19 +11,13 @@
 
     <groupId>org.broodlab.archiveboy.ui</groupId>
     <artifactId>archiveboy-ui</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui-main-menu</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>common</module>
+        <module>main</module>
+        <module>main-menu</module>
+    </modules>
 
     <build>
         <plugins>

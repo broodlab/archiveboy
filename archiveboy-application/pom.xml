@@ -25,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>org.broodlab.archiveboy.ui</groupId>
-            <artifactId>archiveboy-ui</artifactId>
+            <artifactId>archiveboy-ui-main</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
