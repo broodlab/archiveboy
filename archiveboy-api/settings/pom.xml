@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>org.broodlab.archiveboy.commons</groupId>
-            <artifactId>test-tools</artifactId>
+            <artifactId>archiveboy-commons-test-tools</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>

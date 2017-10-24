@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>org.broodlab.archiveboy.commons</groupId>
-    <artifactId>test-tools</artifactId>
+    <artifactId>archiveboy-commons-test-tools</artifactId>
 
     <dependencies>
         <dependency>
