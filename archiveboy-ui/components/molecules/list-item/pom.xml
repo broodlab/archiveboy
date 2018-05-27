@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.broodlab.archiveboy.ui.components</groupId>
-        <artifactId>archiveboy-ui-components</artifactId>
+        <groupId>org.broodlab.archiveboy.ui.components.molecules</groupId>
+        <artifactId>archiveboy-ui-components-molecules</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
