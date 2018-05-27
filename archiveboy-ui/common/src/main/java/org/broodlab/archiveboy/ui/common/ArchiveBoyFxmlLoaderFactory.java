@@ -31,6 +31,17 @@ public class ArchiveBoyFxmlLoaderFactory {
     }
 
     public FXMLLoader createUiComponentFxmlLoader(Object componentInstance,
+                                                  String fxmlFilePath) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(componentInstance.getClass().getResource(fxmlFilePath));
+        fxmlLoader.setBuilderFactory(archiveBoyUiComponentBuilderFactory);
+        fxmlLoader.setRoot(componentInstance);
+        fxmlLoader.setController(componentInstance);
+
+        return fxmlLoader;
+    }
+
+    public FXMLLoader createUiComponentFxmlLoader(Object componentInstance,
                                                   String fxmlFilePath,
                                                   String resourceBundleName) throws IOException {
 

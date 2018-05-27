@@ -41,7 +41,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.broodlab.archiveboy.application.ArchiveBoyApplication</mainClass>
+                            <mainClass>org.broodlab.archiveboy.application.main.ArchiveBoyApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

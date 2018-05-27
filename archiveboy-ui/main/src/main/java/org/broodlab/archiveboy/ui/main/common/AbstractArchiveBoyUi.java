@@ -1,4 +1,4 @@
-package org.broodlab.archiveboy.ui;
+package org.broodlab.archiveboy.ui.main.common;
 
 import io.reactivex.rxjavafx.observables.JavaFxObservable;
 import javafx.application.Application;
@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
 
-public class ArchiveBoyUi extends Application {
+public abstract class AbstractArchiveBoyUi extends Application {
 
     private ArchiveBoyFxmlLoaderFactory archiveBoyFxmlLoaderFactory;
     private Dispatcher dispatcher;
@@ -21,7 +21,7 @@ public class ArchiveBoyUi extends Application {
     private Parent rootNode;
     private Stage primaryStage;
 
-    public ArchiveBoyUi() {
+    public AbstractArchiveBoyUi() {
         ApplicationContext archiveBoyContext = ArchiveBoyContextHolder.getArchiveBoyContext();
         archiveBoyFxmlLoaderFactory = archiveBoyContext.getBean(ArchiveBoyFxmlLoaderFactory.class);
         dispatcher = archiveBoyContext.getBean(Dispatcher.class);
@@ -29,7 +29,7 @@ public class ArchiveBoyUi extends Application {
     }
 
     public void init() throws IOException {
-        rootNode = archiveBoyFxmlLoaderFactory.createApplicationFxmlLoader(this, "/ArchiveBoy.fxml").load();
+        rootNode = archiveBoyFxmlLoaderFactory.createApplicationFxmlLoader(this, fxmlFilePath()).load();
         onLaunched();
         onClosed();
     }
@@ -56,4 +56,6 @@ public class ArchiveBoyUi extends Application {
                 .filter(v -> !v.getNewVal())
                 .subscribe(c -> primaryStage.close());
     }
+
+    public abstract String fxmlFilePath();
 }

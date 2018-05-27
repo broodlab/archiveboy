@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root minWidth="300" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <JFXListView fx:id="sideNavigationMenuItems" HBox.hgrow="ALWAYS">
+        </JFXListView>
+    </children>
+</fx:root>

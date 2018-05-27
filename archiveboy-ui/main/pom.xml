@@ -23,6 +23,16 @@
             <artifactId>archiveboy-ui-main-menu</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.broodlab.archiveboy.ui.components.molecules</groupId>
+            <artifactId>archiveboy-ui-components-molecules-list-item</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>1.9.1</version>
+        </dependency>
     </dependencies>
 
 </project>

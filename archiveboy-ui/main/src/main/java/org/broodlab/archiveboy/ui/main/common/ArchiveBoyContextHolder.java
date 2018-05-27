@@ -1,4 +1,4 @@
-package org.broodlab.archiveboy.ui;
+package org.broodlab.archiveboy.ui.main.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

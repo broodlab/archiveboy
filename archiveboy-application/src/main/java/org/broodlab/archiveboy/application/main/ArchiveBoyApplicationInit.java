@@ -1,4 +1,4 @@
-package org.broodlab.archiveboy.application;
+package org.broodlab.archiveboy.application.main;
 
 import org.broodlab.archiveboy.api.settings.ISettingsService;
 import org.broodlab.archiveboy.api.workspace.IWorkspaceService;
