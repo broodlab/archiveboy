@@ -10,3 +10,4 @@ const compileTsFiles = (done) => {
 };
 
 exports.compileTsFiles = series(compileTsFiles);
+exports.build = series(compileTsFiles);

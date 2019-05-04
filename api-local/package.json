@@ -1,7 +1,8 @@
 {
   "name": "archiveboy-api-local",
   "scripts": {
-    "compile-ts-files": "gulp compileTsFiles"
+    "compile-ts-files": "gulp compileTsFiles",
+    "build": "gulp build"
   },
   "devDependencies": {
     "fancy-log": "^1.3.3",
