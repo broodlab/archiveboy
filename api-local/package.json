@@ -9,7 +9,7 @@
     "@types/node": "^12.0.0",
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
-    "gulp-workflows": "git:github.com:broodlab/gulp-workflows.git",
+    "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
     "ts-loader": "^5.4.5",
     "typescript": "^3.4.5",
     "webpack": "^4.30.0",
