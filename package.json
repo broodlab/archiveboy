@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cd api-local && npm run build",
-    "prettify": "./node_modules/.bin/prettier --config --write **/*.{js,ts}"
+    "prettify": "npx prettier --config --write **/*.{js,ts}"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
