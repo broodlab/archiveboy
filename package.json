@@ -10,9 +10,10 @@
   "license": "MIT",
   "scripts": {
     "build": "cd api-local && npm run build",
-    "prettify": "npx prettier --config --write **/*.{js,ts}"
+^    "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write **/*.{js,ts}"
   },
   "devDependencies": {
+    "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
     "prettier": "^1.17.0"
   }
 }
