@@ -2,7 +2,8 @@
   "name": "archiveboy-api-local",
   "scripts": {
     "build": "gulp build",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "prettify": "npx prettier --config prettier.config.js --write **/*.{js,ts}"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -11,6 +12,7 @@
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
     "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
+    "prettier": "^1.17.1",
     "ts-loader": "^5.4.5",
     "typescript": "^3.4.5",
     "webpack": "^4.30.0",
