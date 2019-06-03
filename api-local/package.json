@@ -1,7 +1,8 @@
 {
   "name": "archiveboy-api-local",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "lint": "gulp lint"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
