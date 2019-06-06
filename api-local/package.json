@@ -2,6 +2,7 @@
   "name": "archiveboy-api-local",
   "scripts": {
     "build": "gulp build",
+    "dev": "gulp dev",
     "lint": "gulp lint",
     "prettify": "npx prettier --config prettier.config.js --write **/*.{js,ts}"
   },
