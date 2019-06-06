@@ -13,6 +13,7 @@
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
     "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
+    "gulp-util": "^3.0.8",
     "prettier": "^1.17.1",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.1",
