@@ -3,6 +3,7 @@
   "scripts": {
     "build": "gulp build",
     "dev": "gulp dev",
+    "dev-integration-test": "gulp dev-integration-test",
     "dev-unit-test": "gulp dev-unit-test",
     "lint": "gulp lint",
     "prettify": "npx prettier --config prettier.config.js --write **/*.{js,ts}"
