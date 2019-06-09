@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   }
 }
