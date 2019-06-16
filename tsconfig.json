@@ -1,16 +1,12 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "commonjs",
-    "paths": {
-      "@archiveboy/api/*": [
-        "./api/src/*"
-      ]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "paths": {
+            "@archiveboy/api/*": ["./api/src/*"]
+        },
+        "sourceMap": false,
+        "target": "es5"
     },
-    "sourceMap": false,
-    "target": "es5"
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
 language: node_js
 node_js:
-  - "10"
+    - "10"
 install: npm i && cd api-local && npm i
 script: npm run build

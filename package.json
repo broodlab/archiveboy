@@ -1,19 +1,19 @@
 {
-  "name": "archiveboy",
-  "version": "0.0.1",
-  "description": "Organization and archiving of photo and video files.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/broodlab/archiveboy.git"
-  },
-  "author": "Peter Fiedler",
-  "license": "MIT",
-  "scripts": {
-    "build": "cd api-local && npm run build",
-    "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write **/*.{js,ts}"
-  },
-  "devDependencies": {
-    "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
-    "prettier": "^1.18.2"
-  }
+    "name": "archiveboy",
+    "version": "0.0.1",
+    "description": "Organization and archiving of photo and video files.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/broodlab/archiveboy.git"
+    },
+    "author": "Peter Fiedler",
+    "license": "MIT",
+    "scripts": {
+        "build": "cd api-local && npm run build",
+        "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts,yml}'"
+    },
+    "devDependencies": {
+        "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
+        "prettier": "^1.18.2"
+    }
 }
