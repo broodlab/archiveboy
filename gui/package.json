@@ -4,7 +4,7 @@
     "scripts": {
         "build": "ng build",
         "e2e": "ng e2e",
-        "lint": "ng lint",
+        "lint": "gulp lint",
         "ng": "ng",
         "prettify": "npx prettier --config prettier.config.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts}'",
         "start": "ng serve",
