@@ -1,3 +1,9 @@
-const {createWorkflows} = require("gulp-tasks-and-workflows");
+const {createLintWorkflow} = require("gulp-tasks-and-workflows/workflows");
+const {createBuildWorkflow} = require("./gulp/workflows");
 
-module.exports = createWorkflows("api-local");
+const moduleName = "gui";
+
+module.exports = {
+    build: createBuildWorkflow(moduleName),
+    lint: createLintWorkflow(moduleName)
+};

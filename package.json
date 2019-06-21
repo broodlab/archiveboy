@@ -9,11 +9,14 @@
     "author": "Peter Fiedler",
     "license": "MIT",
     "scripts": {
-        "build": "cd api-local && npm run build",
+        "build:api-local": "cd api-local && npm run build",
+        "build:gui": "cd gui && npm run build",
+        "build": "run-p build:api-local build:gui",
         "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts,yml}'"
     },
     "devDependencies": {
         "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
+        "npm-run-all": "^4.1.5",
         "prettier": "^1.18.2"
     }
 }
