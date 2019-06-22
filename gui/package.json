@@ -4,6 +4,7 @@
     "scripts": {
         "build": "gulp build",
         "dev": "ng serve",
+        "dev-unit-test": "gulp dev-unit-test",
         "e2e": "ng e2e",
         "lint": "gulp lint",
         "ng": "ng",
