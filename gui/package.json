@@ -6,7 +6,7 @@
         "dev": "ng serve",
         "dev-integration-test": "gulp dev-integration-test",
         "dev-unit-test": "gulp dev-unit-test",
-        "e2e": "ng e2e",
+        "e2e-test": "npx webdriver-manager update --versions.chrome 74.0.3729.6 && ng e2e --webdriverUpdate=false",
         "lint": "gulp lint",
         "ng": "ng",
         "prettify": "npx prettier --config prettier.config.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts}'",
