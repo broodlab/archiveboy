@@ -1,7 +1,7 @@
-import {AppPage} from "./app.po";
-import {browser, logging} from "protractor";
-import {expect} from "chai";
 import {beforeEach, describe, it} from "mocha";
+import {browser, logging} from "protractor";
+import {AppPage} from "./app.po";
+import {expect} from "chai";
 
 describe("workspace-project App", () => {
     let page: AppPage;
