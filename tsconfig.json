@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "module": "commonjs",
         "paths": {
             "@archiveboy/api/*": ["./api/src/*"]
         },
