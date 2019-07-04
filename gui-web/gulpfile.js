@@ -1,7 +1,7 @@
 const {createDevIntegrationTestWorkflow, createDevUnitTestWorkflow, createLintWorkflow} = require("gulp-tasks-and-workflows/workflows");
 const {createBuildWorkflow} = require("./gulp/workflows");
 
-const moduleName = "gui";
+const moduleName = "gui-web";
 
 module.exports = {
     build: createBuildWorkflow(moduleName),
