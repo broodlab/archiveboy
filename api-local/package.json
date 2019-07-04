@@ -1,5 +1,5 @@
 {
-    "name": "archiveboy-api-local",
+    "name": "api-local",
     "scripts": {
         "build": "gulp build",
         "dev": "gulp dev",
