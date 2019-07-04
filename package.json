@@ -10,13 +10,13 @@
     "license": "MIT",
     "scripts": {
         "build:api-local": "cd api-local && npm run build",
-        "build:gui": "cd gui && npm run build",
-        "build": "run-p build:api-local build:gui",
+        "build:gui-web": "cd gui-web && npm run build",
+        "build": "run-p build:api-local build:gui-web",
         "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts,yml}'",
         "setup:archiveboy": "npm i",
         "setup:api-local": "cd api-local && npm i",
-        "setup:gui": "cd gui && npm i",
-        "setup": "run-p setup:archiveboy setup:api-local setup:gui"
+        "setup:gui-web": "cd gui-web && npm i",
+        "setup": "run-p setup:archiveboy setup:api-local setup:gui-web"
     },
     "devDependencies": {
         "gulp-tasks-and-workflows": "git:github.com:broodlab/gulp-tasks-and-workflows.git",
