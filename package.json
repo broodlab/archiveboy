@@ -12,7 +12,7 @@
         "build:api-local": "cd api-local && npm run build",
         "build:gui-web": "cd gui-web && npm run build",
         "build": "run-p build:*",
-        "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '{,!(dist)/**/}*.{css,html,js,json,scss,ts,yml}'",
+        "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '**/*.{css,html,js,json,scss,ts,yml}'",
         "setup:archiveboy": "npm i",
         "setup:api-local": "cd api-local && npm i",
         "setup:gui-web": "cd gui-web && npm i",

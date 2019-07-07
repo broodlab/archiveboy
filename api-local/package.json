@@ -6,7 +6,7 @@
         "dev-integration-test": "gulp dev-integration-test",
         "dev-unit-test": "gulp dev-unit-test",
         "lint": "gulp lint",
-        "prettify": "npx prettier --config prettier.config.js --write '{,!(dist)/**/}*.{js,json,ts}'"
+        "prettify": "npx prettier --config prettier.config.js --write '**/*.{js,json,ts}'"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^1.11.0",
