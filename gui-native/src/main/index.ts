@@ -1,4 +1,4 @@
-import {app, BrowserWindow, screen} from "electron";
+import {BrowserWindow, app, screen} from "electron";
 
 let browserWindow;
 
