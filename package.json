@@ -10,6 +10,7 @@
     "license": "MIT",
     "scripts": {
         "build:api-local": "cd api-local && npm run build",
+        "build:gui-native": "cd gui-native && npm run build",
         "build:gui-web": "cd gui-web && npm run build",
         "build": "run-p build:*",
         "prettify": "npx prettier --config node_modules/gulp-tasks-and-workflows/config/prettier.js --write '**/*.{css,html,js,json,scss,ts,yml}'",
