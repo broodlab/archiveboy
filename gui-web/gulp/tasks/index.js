@@ -1,1 +1,1 @@
-exports.createBuildGuiTask = require("./build-gui.task-factory").createBuildGuiTask;
+exports.createBuildGuiWebTask = require("./build-gui-web.task-factory").createBuildGuiWebTask;

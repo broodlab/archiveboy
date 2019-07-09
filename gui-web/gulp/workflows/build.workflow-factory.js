@@ -5,14 +5,14 @@ const {
     createRunUnitTestsTask
 } = require("gulp-tasks-and-workflows/tasks");
 const {parallel, series} = require("gulp");
-const {createBuildGuiTask} = require("../tasks");
+const {createBuildGuiWebTask} = require("../tasks");
 
 const failAfterError = true;
 
 exports.createBuildWorkflow = moduleName =>
     series(
         parallel(
-            createBuildGuiTask(moduleName),
+            createBuildGuiWebTask(moduleName),
             createCompileTsFilesTask(moduleName, "unit-tests.js", failAfterError),
             createCompileTsFilesTask(moduleName, "integration-tests.js", failAfterError)
         ),
