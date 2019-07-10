@@ -8,9 +8,7 @@
         "e2e-test": "npx webdriver-manager update --versions.chrome 74.0.3729.6 && ng e2e --webdriverUpdate=false",
         "lint": "gulp lint",
         "ng": "ng",
-        "prettify": "npx prettier --config prettier.config.js --write '**/*.{css,html,js,json,scss,ts}'",
-        "start": "ng serve",
-        "test": "ng test"
+        "prettify": "npx prettier --config prettier.config.js --write '**/*.{css,html,js,json,scss,ts}'"
     },
     "dependencies": {
         "@angular/animations": "~8.1.0",
