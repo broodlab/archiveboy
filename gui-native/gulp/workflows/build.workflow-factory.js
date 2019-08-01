@@ -1,7 +1,22 @@
-const {createLintTsFilesTask} = require("gulp-tasks-and-workflows/tasks");
-const {series} = require("gulp");
+const {
+    createCompileTsFilesTask,
+    createLintTsFilesTask,
+    createRunIntegrationTestsTask,
+    createRunUnitTestsTask
+} = require("broodlab-toolbox/tasks");
+const {parallel, series} = require("gulp");
 const {createBuildGuiNativeTask} = require("../tasks");
 
 const failAfterError = true;
 
-exports.createBuildWorkflow = moduleName => series(createBuildGuiNativeTask(moduleName), createLintTsFilesTask(moduleName, failAfterError));
+exports.createBuildWorkflow = moduleName =>
+    series(
+        parallel(
+            createBuildGuiNativeTask(moduleName),
+            createCompileTsFilesTask(moduleName, "integration.js", failAfterError),
+            createCompileTsFilesTask(moduleName, "unit.js", failAfterError)
+        ),
+        createRunUnitTestsTask(moduleName, failAfterError),
+        createRunIntegrationTestsTask(moduleName, failAfterError),
+        createLintTsFilesTask(moduleName, failAfterError)
+    );

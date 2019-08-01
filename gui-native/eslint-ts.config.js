@@ -1,1 +1,1 @@
-module.exports = require("gulp-tasks-and-workflows/config/eslint-ts");
+module.exports = require("broodlab-toolbox/configs/eslint/eslint-ts");
