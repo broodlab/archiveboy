@@ -18,7 +18,12 @@
         "setup:api-local": "cd api-local && npm i",
         "setup:gui-native": "cd gui-native && npm i",
         "setup:gui-web": "cd gui-web && npm i",
-        "setup": "run-p setup:*"
+        "setup": "run-p setup:*",
+        "uplate:archiveboy": "ncu -u",
+        "uplate:api-local": "cd api-local && ncu -u",
+        "uplate:gui-native": "cd gui-native && ncu -u",
+        "uplate:gui-web": "cd gui-web && ncu -u",
+        "uplate": "run-p build:*"
     },
     "devDependencies": {
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
