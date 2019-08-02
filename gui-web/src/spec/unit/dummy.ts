@@ -1,7 +1,7 @@
 import {expect} from "chai";
 
-describe("foo", () => {
-    it("should be true", () => {
+describe("dummy unit spec", () => {
+    it("for gui-web", () => {
         expect(true).to.be.true;
     });
 });

@@ -1,1 +1,1 @@
-module.exports = require("gulp-tasks-and-workflows/config/prettier");
+module.exports = require("broodlab-toolbox/configs/prettier");

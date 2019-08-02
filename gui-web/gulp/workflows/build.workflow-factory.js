@@ -1,9 +1,10 @@
 const {
     createCompileTsFilesTask,
+    createDeleteDistFolderTask,
     createLintTsFilesTask,
     createRunIntegrationTestsTask,
     createRunUnitTestsTask
-} = require("gulp-tasks-and-workflows/tasks");
+} = require("broodlab-toolbox/tasks");
 const {parallel, series} = require("gulp");
 const {createBuildGuiWebTask} = require("../tasks");
 
@@ -11,10 +12,11 @@ const failAfterError = true;
 
 exports.createBuildWorkflow = moduleName =>
     series(
+        createDeleteDistFolderTask(moduleName),
         parallel(
             createBuildGuiWebTask(moduleName),
-            createCompileTsFilesTask(moduleName, "unit-tests.js", failAfterError),
-            createCompileTsFilesTask(moduleName, "integration-tests.js", failAfterError)
+            createCompileTsFilesTask(moduleName, "unit.js", failAfterError),
+            createCompileTsFilesTask(moduleName, "integration.js", failAfterError)
         ),
         createLintTsFilesTask(moduleName, failAfterError),
         createRunUnitTestsTask(moduleName, failAfterError),
