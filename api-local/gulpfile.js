@@ -1,3 +1,3 @@
-const {createWorkflows} = require("gulp-tasks-and-workflows");
+const {createWorkflows} = require("broodlab-toolbox");
 
 module.exports = createWorkflows("api-local");

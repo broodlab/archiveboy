@@ -1,7 +1,7 @@
 import {expect} from "chai";
 
-describe("bar", () => {
-    it("should be true", () => {
+describe("dummy integration spec", () => {
+    it("for api-local", () => {
         expect(true).to.be.true;
     });
 });
