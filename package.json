@@ -23,7 +23,7 @@
         "uplate:api-local": "cd api-local && ncu -u",
         "uplate:gui-native": "cd gui-native && ncu -u",
         "uplate:gui-web": "cd gui-web && ncu -u",
-        "uplate": "run-p build:*"
+        "uplate": "run-p uplate:*"
     },
     "devDependencies": {
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
