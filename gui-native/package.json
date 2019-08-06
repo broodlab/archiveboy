@@ -3,7 +3,7 @@
     "scripts": {
         "build": "gulp build",
         "dev:gui-native": "wait-on http-get://localhost:4200 && electron-webpack dev",
-        "dev:gui-web": "cd ../gui-web && npm run dev",
+        "dev:gui-web": "cd ../gui-web && npm run dev-electron-renderer",
         "dev": "run-p dev:*",
         "dev-e2e-test": "gulp dev-e2e-test",
         "dev-integration-test": "gulp dev-integration-test",

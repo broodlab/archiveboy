@@ -1,4 +1,8 @@
-const {createBuildWorkflow} = require("./gulp/workflows");
+const {
+    createBuildWorkflow,
+    createConfigureTargetEnvironmentElectronRendererWorkflow,
+    createConfigureTargetEnvironmentElectronWebWorkflow
+} = require("./gulp/workflows");
 const {
     createDevIntegrationTestWorkflow,
     createDevUnitTestWorkflow,
@@ -10,6 +14,8 @@ const {
 const moduleName = "gui-web";
 
 module.exports = {
+    "configure-target-env-electron-renderer": createConfigureTargetEnvironmentElectronRendererWorkflow(moduleName),
+    "configure-target-env-web": createConfigureTargetEnvironmentElectronWebWorkflow(moduleName),
     build: createBuildWorkflow(moduleName),
     "dev-integration-test": createDevIntegrationTestWorkflow(moduleName),
     "dev-unit-test": createDevUnitTestWorkflow(moduleName),
