@@ -1,4 +1,4 @@
-import {BrowserWindow, app, screen} from "electron";
+import {BrowserWindow, app, dialog, ipcMain, screen} from "electron";
 
 let browserWindow;
 
@@ -41,3 +41,16 @@ try {
 } catch (e) {
     throw e;
 }
+
+ipcMain.on("open-file-dialog", event => {
+    dialog.showOpenDialog(
+        {
+            properties: ["openFile", "openDirectory"]
+        },
+        files => {
+            if (files) {
+                event.sender.send("selected-directory", files);
+            }
+        }
+    );
+});
