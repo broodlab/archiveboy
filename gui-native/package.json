@@ -15,14 +15,14 @@
         "run-unit-tests": "gulp run-unit-tests"
     },
     "devDependencies": {
-        "@types/chai": "^4.1.7",
+        "@types/chai": "^4.2.0",
         "@types/mocha": "^5.2.7",
-        "@types/node": "^12.6.9",
+        "@types/node": "^12.7.1",
         "@typescript-eslint/eslint-plugin": "^1.13.0",
         "@typescript-eslint/parser": "^1.13.0",
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
         "chai": "^4.2.0",
-        "electron": "^6.0.0",
+        "electron": "^6.0.1",
         "electron-webpack": "^2.7.4",
         "eslint": "^6.1.0",
         "eslint-config-prettier": "^6.0.0",
