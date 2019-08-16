@@ -4,10 +4,10 @@ import {ipcRenderer} from "electron";
 
 @Component({
     selector: "ab-root",
-    templateUrl: "./app.component.html",
-    styleUrls: ["./app.component.scss"]
+    templateUrl: "./application.component.html",
+    styleUrls: ["./application.component.scss"]
 })
-export class AppComponent implements OnInit {
+export class ApplicationComponent implements OnInit {
     ngOnInit() {
         ipcRenderer.on("selected-directory", (event, path) => {
             console.log(fs.readdirSync(path.toString()));
