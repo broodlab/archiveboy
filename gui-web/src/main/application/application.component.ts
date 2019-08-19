@@ -1,20 +1,31 @@
-import * as fs from "fs";
-import {Component, OnInit} from "@angular/core";
-import {ipcRenderer} from "electron";
+import {ChangeDetectorRef, Component} from "@angular/core";
+import {Store, select} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {pairwise} from "rxjs/operators";
+import {selectingFiles} from "./application.actions";
 
 @Component({
     selector: "ab-root",
-    templateUrl: "./application.component.html",
-    styleUrls: ["./application.component.scss"]
+    styleUrls: ["./application.component.scss"],
+    templateUrl: "./application.component.html"
 })
-export class ApplicationComponent implements OnInit {
-    ngOnInit() {
-        ipcRenderer.on("selected-directory", (event, path) => {
-            console.log(fs.readdirSync(path.toString()));
+export class ApplicationComponent {
+    selectedFiles$: Observable<string[]>;
+
+    private selectingFiles$: Observable<boolean>;
+
+    constructor(private store: Store<{app: {selectingFiles: boolean; selectedFiles: string[]}}>, changeDetectionRef: ChangeDetectorRef) {
+        this.selectingFiles$ = store.pipe(select(state => state.app.selectingFiles));
+        this.selectedFiles$ = store.pipe(select(state => state.app.selectedFiles));
+
+        this.selectingFiles$.pipe(pairwise()).subscribe(([oldValue, currentValue]) => {
+            if (oldValue === true && currentValue === false) {
+                setTimeout(() => changeDetectionRef.detectChanges());
+            }
         });
     }
 
     selectFiles() {
-        ipcRenderer.send("open-file-dialog");
+        this.store.dispatch(selectingFiles());
     }
 }
