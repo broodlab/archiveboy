@@ -1,4 +1,4 @@
 import {createAction} from "@ngrx/store";
 
-export const selectingFiles = createAction("[Application] Selecting Files");
-export const selectedFiles = createAction("[Application] Selected Files");
+export const selectDirectory = createAction("[Application] Select Directory");
+export const selectDirectorySuccess = createAction("[Application] Select Directory Success");

@@ -1,23 +1,24 @@
 import {createReducer, on} from "@ngrx/store";
-import {selectedFiles, selectingFiles} from "./application.actions";
+import {selectDirectory, selectDirectorySuccess} from "./application.actions";
 
 export const initialState = {
-    selectingFiles: false,
-    selectedFiles: []
+    selectDirectoryInProgress: false
 };
 
-const onSelectingFiles = state => {
+const onSelectDirectory = state => {
     return {
-        selectingFiles: true,
-        selectedFiles: []
+        selectDirectoryInProgress: true
     };
 };
 
-const onSelectedFiles = (state, action) => {
+const onSelectDirectorySuccess = state => {
     return {
-        selectingFiles: false,
-        selectedFiles: action.payload
+        selectDirectoryInProgress: false
     };
 };
 
-export const applicationReducer = createReducer(initialState, on(selectedFiles, onSelectedFiles), on(selectingFiles, onSelectingFiles));
+export const applicationReducer = createReducer(
+    initialState,
+    on(selectDirectory, onSelectDirectory),
+    on(selectDirectorySuccess, onSelectDirectorySuccess)
+);
