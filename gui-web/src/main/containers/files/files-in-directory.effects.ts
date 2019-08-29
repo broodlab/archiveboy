@@ -1,20 +1,20 @@
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {catchError, map, mergeMap} from "rxjs/operators";
+import {catchError, concatMap, mergeMap} from "rxjs/operators";
+import {directorySelectionFinalized, directorySelectionSucceeded} from "../../application/application.actions";
 import {EMPTY} from "rxjs";
 import {FilesInDirectoryService} from "./files-in-directory.service";
 import {Injectable} from "@angular/core";
 import {filesInDirectoryReadSuccess} from "./files.actions";
-import {selectDirectorySuccess} from "../../application/application.actions";
 
 @Injectable()
 export class FilesInDirectoryEffects {
     filesInDirectory$ = createEffect(() =>
         this.actions$.pipe(
-            ofType(selectDirectorySuccess.type),
+            ofType(directorySelectionSucceeded.type),
             mergeMap((action: any) =>
                 this.filesInDirectoryService.provideFilesInDirectory(action.payload).pipe(
-                    map(filesInDirectory => {
-                        return {type: filesInDirectoryReadSuccess.type, payload: filesInDirectory};
+                    concatMap(filesInDirectory => {
+                        return [{type: filesInDirectoryReadSuccess.type, payload: filesInDirectory}, {type: directorySelectionFinalized.type}];
                     }),
                     catchError(() => EMPTY)
                 )

@@ -8,9 +8,9 @@ import {pairwise} from "rxjs/operators";
     templateUrl: "./application.component.html"
 })
 export class ApplicationComponent {
-    constructor(private store: Store<{application: {selectDirectoryInProgress: boolean}}>, changeDetectionRef: ChangeDetectorRef) {
+    constructor(private store: Store<{application: {directorySelectionInProgress: boolean}}>, changeDetectionRef: ChangeDetectorRef) {
         store
-            .pipe(select(state => state.application.selectDirectoryInProgress))
+            .pipe(select(state => state.application.directorySelectionInProgress))
             .pipe(pairwise())
             .subscribe(([oldValue, currentValue]) => {
                 if (oldValue === true && currentValue === false) {
