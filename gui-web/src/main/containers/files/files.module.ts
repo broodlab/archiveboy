@@ -1,6 +1,7 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
 import {EffectsModule} from "@ngrx/effects";
+import {FileListModule} from "../../components/file-list/file-list.module";
 import {FilesComponent} from "./files.component";
 import {FilesInDirectoryEffects} from "./files-in-directory.effects";
 import {FilesInDirectoryService} from "./files-in-directory.service";
@@ -10,7 +11,13 @@ import {filesReducer} from "./files.reducer";
 
 @NgModule({
     declarations: [FilesComponent],
-    imports: [BrowserModule, CommonModule, EffectsModule.forFeature([FilesInDirectoryEffects]), StoreModule.forFeature("files", filesReducer)],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        EffectsModule.forFeature([FilesInDirectoryEffects]),
+        FileListModule,
+        StoreModule.forFeature("files", filesReducer)
+    ],
     exports: [FilesComponent],
     providers: [FilesInDirectoryService]
 })

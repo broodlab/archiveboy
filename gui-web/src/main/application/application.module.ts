@@ -17,8 +17,7 @@ import {applicationReducer} from "./application.reducer";
         CommonModule,
         EffectsModule.forRoot([DirectorySelectionEffects]),
         FilesModule,
-        StoreModule.forRoot({application: applicationReducer}),
-        FilesModule
+        StoreModule.forRoot({application: applicationReducer})
     ],
     providers: [DirectorySelectionService]
 })
