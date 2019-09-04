@@ -1,7 +1,8 @@
 import {createReducer, on} from "@ngrx/store";
 import {directorySelectionFinalized, directorySelectionSucceeded, selectDirectory} from "../shared/actions";
+import {ApplicationState} from "../shared/models/states";
 
-export const initialState = {
+export const initialState: ApplicationState = {
     directorySelectionInProgress: false
 };
 

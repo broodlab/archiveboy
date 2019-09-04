@@ -1,7 +1,8 @@
 import {createReducer, on} from "@ngrx/store";
+import {FilesState} from "./files.state";
 import {filesInDirectoryReadSuccess} from "./files.actions";
 
-export const initialState = {
+export const initialState: FilesState = {
     filesInDirectory: []
 };
 

@@ -1,5 +1,6 @@
 import {ChangeDetectorRef, Component} from "@angular/core";
 import {Store, select} from "@ngrx/store";
+import {ApplicationState} from "../shared/models/states";
 import {pairwise} from "rxjs/operators";
 
 @Component({
@@ -8,7 +9,7 @@ import {pairwise} from "rxjs/operators";
     templateUrl: "./application.component.html"
 })
 export class ApplicationComponent {
-    constructor(private store: Store<{application: {directorySelectionInProgress: boolean}}>, changeDetectionRef: ChangeDetectorRef) {
+    constructor(private store: Store<{application: ApplicationState}>, changeDetectionRef: ChangeDetectorRef) {
         store
             .pipe(select(state => state.application.directorySelectionInProgress))
             .pipe(pairwise())
