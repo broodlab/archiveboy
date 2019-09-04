@@ -23,6 +23,7 @@
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
         "chai": "^4.2.0",
         "electron": "^6.0.7",
+        "electron-devtools-installer": "^2.2.4",
         "electron-webpack": "^2.7.4",
         "eslint": "^6.3.0",
         "eslint-config-prettier": "^6.2.0",
