@@ -1,6 +1,6 @@
 import {Actions, createEffect, ofType} from "@ngrx/effects";
 import {catchError, map, mergeMap} from "rxjs/operators";
-import {directorySelectionSucceeded, selectDirectory} from "./application.actions";
+import {directorySelectionSucceeded, selectDirectory} from "../shared/actions";
 import {DirectorySelectionService} from "./directory-selection.service";
 import {EMPTY} from "rxjs";
 import {Injectable} from "@angular/core";

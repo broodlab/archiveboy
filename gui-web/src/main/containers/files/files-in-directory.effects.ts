@@ -1,6 +1,6 @@
 import {Actions, createEffect, ofType} from "@ngrx/effects";
 import {catchError, concatMap, mergeMap} from "rxjs/operators";
-import {directorySelectionFinalized, directorySelectionSucceeded} from "../../application/application.actions";
+import {directorySelectionFinalized, directorySelectionSucceeded} from "../../shared/actions";
 import {EMPTY} from "rxjs";
 import {FilesInDirectoryService} from "./files-in-directory.service";
 import {Injectable} from "@angular/core";

@@ -1,7 +1,7 @@
 import {Store, select} from "@ngrx/store";
 import {Component} from "@angular/core";
 import {Observable} from "rxjs";
-import {selectDirectory} from "../../application/application.actions";
+import {selectDirectory} from "../../shared/actions";
 
 @Component({
     selector: "ab-files",
