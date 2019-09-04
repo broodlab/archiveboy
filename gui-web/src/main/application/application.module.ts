@@ -6,6 +6,7 @@ import {DirectorySelectionService} from "./directory-selection.service";
 import {EffectsModule} from "@ngrx/effects";
 import {FilesModule} from "../containers/files/files.module";
 import {NgModule} from "@angular/core";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {StoreModule} from "@ngrx/store";
 import {applicationReducer} from "./application.reducer";
 
@@ -17,7 +18,10 @@ import {applicationReducer} from "./application.reducer";
         CommonModule,
         EffectsModule.forRoot([DirectorySelectionEffects]),
         FilesModule,
-        StoreModule.forRoot({application: applicationReducer})
+        StoreModule.forRoot({application: applicationReducer}),
+        StoreDevtoolsModule.instrument({
+            maxAge: 25
+        })
     ],
     providers: [DirectorySelectionService]
 })
