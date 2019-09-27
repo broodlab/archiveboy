@@ -52,6 +52,7 @@
         "gulp-util": "^3.0.8",
         "prettier": "^1.18.2",
         "protractor": "~5.4.2",
+        "ts-loader": "^6.1.2",
         "ts-node": "~8.3.0",
         "typescript": "~3.6.3",
         "webpack-cli": "^3.3.8"
