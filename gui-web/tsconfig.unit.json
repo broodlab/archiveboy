@@ -1,4 +1,4 @@
 {
     "extends": "../tsconfig.json",
-    "exclude": ["src/main", "src/spec/e2e", "src/spec/integration"]
+    "exclude": ["src/api-local-client", "src/main", "src/spec/e2e", "src/spec/integration"]
 }

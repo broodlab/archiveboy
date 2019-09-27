@@ -1,1 +1,1 @@
-export * from "./list-files-in-dir";
+export * from "./provide-files-in-directory";
