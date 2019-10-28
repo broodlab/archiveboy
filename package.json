@@ -13,6 +13,11 @@
         "build:gui-native": "cd gui-native && npm run build",
         "build:gui-web": "cd gui-web && npm run build",
         "build": "run-p build:*",
+        "clean:archiveboy": "rm -Rf node_modules",
+        "clean:api-local": "cd api-local && npm run clean",
+        "clean:gui-native": "cd gui-native && npm run clean",
+        "clean:gui-web": "cd gui-web && npm run clean",
+        "clean": "run-p clean:*",
         "prettify": "npx prettier --config node_modules/broodlab-toolbox/configs/prettier.js --write '**/*.{css,html,js,json,scss,ts,yml}'",
         "setup:archiveboy": "npm i",
         "setup:api-local": "cd api-local && npm i",
@@ -23,7 +28,7 @@
         "uplate:api-local": "cd api-local && ncu -u",
         "uplate:gui-native": "cd gui-native && ncu -u",
         "uplate:gui-web": "cd gui-web && ncu -u",
-        "uplate": "run-p uplate:*"
+        "uplate": "run-s uplate:*"
     },
     "devDependencies": {
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",

@@ -2,6 +2,7 @@
     "name": "gui-native",
     "scripts": {
         "build": "gulp build",
+        "clean": "rm -Rf node_modules",
         "dev:gui-native": "wait-on http-get://localhost:4200 && electron-webpack dev",
         "dev:gui-web": "cd ../gui-web && npm run dev-electron-renderer",
         "dev": "run-p dev:*",
@@ -15,24 +16,24 @@
         "run-unit-tests": "gulp run-unit-tests"
     },
     "devDependencies": {
-        "@types/chai": "^4.2.3",
+        "@types/chai": "^4.2.4",
         "@types/mocha": "^5.2.7",
-        "@types/node": "^12.7.8",
-        "@typescript-eslint/eslint-plugin": "^2.3.1",
-        "@typescript-eslint/parser": "^2.3.1",
+        "@types/node": "^12.11.7",
+        "@typescript-eslint/eslint-plugin": "^2.6.0",
+        "@typescript-eslint/parser": "^2.6.0",
         "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
         "chai": "^4.2.0",
-        "electron": "^6.0.10",
+        "electron": "^7.0.0",
         "electron-devtools-installer": "^2.2.4",
         "electron-webpack": "^2.7.4",
-        "eslint": "^6.4.0",
-        "eslint-config-prettier": "^6.3.0",
+        "eslint": "^6.6.0",
+        "eslint-config-prettier": "^6.5.0",
         "eslint-plugin-prettier": "^3.1.1",
         "gulp": "^4.0.2",
         "gulp-util": "^3.0.8",
         "npm-run-all": "^4.1.5",
         "prettier": "^1.18.2",
         "wait-on": "^3.3.0",
-        "webpack": "^4.41.0"
+        "webpack": "^4.41.2"
     }
 }
