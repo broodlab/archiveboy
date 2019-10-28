@@ -2,7 +2,6 @@ import {Observable, fromEvent} from "rxjs";
 import {first, map} from "rxjs/operators";
 import {Injectable} from "@angular/core";
 import {ipcRenderer} from "electron";
-import IpcRendererEvent = Electron.IpcRendererEvent;
 
 @Injectable()
 export class DirectorySelectionService {
@@ -11,6 +10,6 @@ export class DirectorySelectionService {
 
         return fromEvent(ipcRenderer, "selected-directory")
             .pipe(first())
-            .pipe(map((result: [IpcRendererEvent, string[]]) => result[1][0]));
+            .pipe(map(([, {filePaths}]) => filePaths[0]));
     }
 }

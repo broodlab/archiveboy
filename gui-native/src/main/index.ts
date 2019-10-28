@@ -50,14 +50,13 @@ try {
 }
 
 ipcMain.on("open-file-dialog", event => {
-    dialog.showOpenDialog(
-        {
+    dialog
+        .showOpenDialog(browserWindow, {
             properties: ["openFile", "openDirectory"]
-        },
-        files => {
+        })
+        .then(files => {
             if (files) {
                 event.sender.send("selected-directory", files);
             }
-        }
-    );
+        });
 });
