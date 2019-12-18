@@ -1,1 +1,1 @@
-export {api} from "@archiveboy/api-local/api";
+export {api} from "@archiveboy/api-local";

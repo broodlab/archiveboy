@@ -2,7 +2,6 @@
     "name": "gui-web",
     "scripts": {
         "build": "npm run configure-target-env-electron-renderer && gulp build",
-        "clean": "rm -Rf node_modules",
         "configure-target-env-electron-renderer": "gulp configure-target-env-electron-renderer",
         "configure-target-env-web": "gulp configure-target-env-web",
         "dev": "npm run configure-target-env-web && ng serve",
@@ -11,10 +10,10 @@
         "dev-unit-test": "gulp dev-unit-test",
         "lint": "gulp lint",
         "ng": "ng",
-        "prettify": "npx prettier --config prettier.config.js --write '**/*.{css,html,js,json,scss,ts}'",
         "run-e2e-tests": "npx webdriver-manager update --versions.chrome 74.0.3729.6 && ng e2e --webdriverUpdate=false",
         "run-integration-tests": "gulp run-integration-tests",
-        "run-unit-tests": "gulp run-unit-tests"
+        "run-unit-tests": "gulp run-unit-tests",
+        "uplate": "ncu -u"
     },
     "dependencies": {
         "@angular/animations": "~8.2.14",
@@ -25,6 +24,8 @@
         "@angular/platform-browser": "~8.2.14",
         "@angular/platform-browser-dynamic": "~8.2.14",
         "@angular/router": "~8.2.14",
+        "@archiveboy/api": "^0.0.1",
+        "@archiveboy/api-local": "^0.0.1",
         "@ngrx/effects": "^8.5.2",
         "@ngrx/store": "^8.5.2",
         "@ngrx/store-devtools": "^8.5.2",
@@ -37,25 +38,10 @@
         "@angular/cli": "~8.3.19",
         "@angular/compiler-cli": "~8.2.14",
         "@angular/language-service": "~8.2.14",
-        "@types/chai": "^4.2.5",
-        "@types/mocha": "^5.2.7",
+        "@archiveboy/toolbox": "^0.0.1",
         "@types/node": "~12.12.14",
-        "@typescript-eslint/eslint-plugin": "^2.9.0",
-        "@typescript-eslint/parser": "^2.9.0",
-        "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
-        "chai": "^4.2.0",
         "codelyzer": "^5.2.0",
         "electron": "^7.1.2",
-        "eslint": "^6.7.1",
-        "eslint-config-prettier": "^6.7.0",
-        "eslint-plugin-prettier": "^3.1.1",
-        "gulp": "^4.0.2",
-        "gulp-util": "^3.0.8",
-        "prettier": "^1.19.1",
-        "protractor": "~5.4.2",
-        "ts-loader": "^6.2.1",
-        "ts-node": "~8.5.2",
-        "typescript": "~3.7.2",
-        "webpack-cli": "^3.3.10"
+        "protractor": "~5.4.2"
     }
 }

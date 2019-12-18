@@ -1,5 +1,5 @@
 {
-    "extends": "../tsconfig",
+    "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
     "angularCompilerOptions": {
         "enableIvy": true
     },
@@ -11,9 +11,7 @@
         "lib": ["dom", "es2018"],
         "module": "esnext",
         "paths": {
-            "@archiveboy/api/*": ["../api/src/*"],
-            "@archiveboy/api-client/*": ["./src/api-local-client/*"],
-            "@archiveboy/api-local/*": ["../api-local/src/main/*"]
+            "@archiveboy/api-client/*": ["./src/api-local-client/*"]
         },
         "types": [],
         "typeRoots": ["node_modules/@types"]

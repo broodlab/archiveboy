@@ -7,7 +7,7 @@ const {
     createRunE2eTestsWorkflow,
     createRunIntegrationTestsWorkflow,
     createRunUnitTestsWorkflow
-} = require("broodlab-toolbox/workflows");
+} = require("@archiveboy/toolbox/workflows");
 
 const moduleName = "gui-native";
 

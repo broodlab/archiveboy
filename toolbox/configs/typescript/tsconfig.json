@@ -2,9 +2,6 @@
     "compilerOptions": {
         "baseUrl": ".",
         "moduleResolution": "node",
-        "paths": {
-            "@archiveboy/api/*": ["./api/src/*"]
-        },
         "target": "es2015"
     },
     "exclude": ["node_modules"]

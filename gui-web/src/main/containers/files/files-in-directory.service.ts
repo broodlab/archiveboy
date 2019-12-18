@@ -1,4 +1,4 @@
-import {IFile} from "@archiveboy/api/models";
+import {IFile} from "@archiveboy/api";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {api} from "@archiveboy/api-client/client";

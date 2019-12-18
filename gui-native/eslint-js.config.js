@@ -1,1 +1,1 @@
-module.exports = require("broodlab-toolbox/configs/eslint/eslint-js");
+module.exports = require("@archiveboy/toolbox/configs/eslint/eslint-js");

@@ -1,0 +1,4 @@
+{
+    "packages": ["api", "api-local", "gui-native", "gui-web", "toolbox"],
+    "version": "0.0.1"
+}

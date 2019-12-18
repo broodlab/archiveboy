@@ -1,4 +1,4 @@
-import {IFile} from "@archiveboy/api/models";
+import {IFile} from "@archiveboy/api";
 import {Observable} from "rxjs";
 import {provideFilesInDirectory} from "../files";
 

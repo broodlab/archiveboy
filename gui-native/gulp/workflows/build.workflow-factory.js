@@ -1,4 +1,4 @@
-const {createCompileTsFilesTask, createLintTsFilesTask, createRunIntegrationTestsTask, createRunUnitTestsTask} = require("broodlab-toolbox/tasks");
+const {createCompileTsFilesTask, createLintTsFilesTask, createRunIntegrationTestsTask, createRunUnitTestsTask} = require("@archiveboy/toolbox/tasks");
 const {parallel, series} = require("gulp");
 const {createBuildGuiNativeTask} = require("../tasks");
 

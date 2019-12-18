@@ -9,7 +9,7 @@ const {
     createLintWorkflow,
     createRunIntegrationTestsWorkflow,
     createRunUnitTestsWorkflow
-} = require("broodlab-toolbox/workflows");
+} = require("@archiveboy/toolbox/workflows");
 
 const moduleName = "gui-web";
 

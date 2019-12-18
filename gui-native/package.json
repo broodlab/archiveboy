@@ -3,38 +3,23 @@
     "scripts": {
         "build": "gulp build",
         "clean": "rm -Rf node_modules",
+        "dev": "run-p dev:*",
         "dev:gui-native": "wait-on http-get://localhost:4200 && electron-webpack dev",
         "dev:gui-web": "cd ../gui-web && npm run dev-electron-renderer",
-        "dev": "run-p dev:*",
         "dev-e2e-test": "gulp dev-e2e-test",
         "dev-integration-test": "gulp dev-integration-test",
         "dev-unit-test": "gulp dev-unit-test",
         "lint": "gulp lint",
-        "prettify": "npx prettier --config prettier.config.js --write '**/*.{css,html,js,json,scss,ts}'",
         "run-e2e-tests": "gulp run-e2e-tests",
         "run-integration-tests": "gulp run-integration-tests",
-        "run-unit-tests": "gulp run-unit-tests"
+        "run-unit-tests": "gulp run-unit-tests",
+        "uplate": "ncu -u"
     },
     "devDependencies": {
-        "@types/chai": "^4.2.5",
-        "@types/mocha": "^5.2.7",
-        "@types/node": "^12.12.14",
-        "@typescript-eslint/eslint-plugin": "^2.9.0",
-        "@typescript-eslint/parser": "^2.9.0",
-        "broodlab-toolbox": "git:github.com:broodlab/toolbox.git",
-        "chai": "^4.2.0",
+        "@archiveboy/toolbox": "^0.0.1",
         "electron": "^7.1.2",
         "electron-devtools-installer": "^2.2.4",
         "electron-webpack": "^2.7.4",
-        "eslint": "^6.7.1",
-        "eslint-config-prettier": "^6.7.0",
-        "eslint-plugin-prettier": "^3.1.1",
-        "gulp": "^4.0.2",
-        "gulp-util": "^3.0.8",
-        "npm-run-all": "^4.1.5",
-        "prettier": "^1.19.1",
-        "typescript": "^3.7.2",
-        "wait-on": "^3.3.0",
-        "webpack": "^4.41.2"
+        "wait-on": "^3.3.0"
     }
 }

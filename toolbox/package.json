@@ -1,0 +1,9 @@
+{
+    "name": "@archiveboy/toolbox",
+    "version": "0.0.1",
+    "scripts": {
+        "lint": "npx eslint --config eslint.config.js . --fix",
+        "uplate": "ncu -u"
+    },
+    "main": "index.js"
+}

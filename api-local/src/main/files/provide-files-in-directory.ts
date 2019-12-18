@@ -1,5 +1,5 @@
 import {Observable, from} from "rxjs";
-import {IFile} from "@archiveboy/api/models";
+import {IFile} from "@archiveboy/api";
 import {map} from "rxjs/operators";
 import {promises} from "fs";
 
