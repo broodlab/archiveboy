@@ -26,22 +26,22 @@
         "@angular/router": "~8.2.14",
         "@archiveboy/api": "^0.0.1",
         "@archiveboy/api-local": "^0.0.1",
-        "@ngrx/effects": "^8.5.2",
-        "@ngrx/store": "^8.5.2",
-        "@ngrx/store-devtools": "^8.5.2",
-        "rxjs": "~6.5.3",
+        "@ngrx/effects": "^8.6.0",
+        "@ngrx/store": "^8.6.0",
+        "@ngrx/store-devtools": "^8.6.0",
+        "rxjs": "~6.5.4",
         "tslib": "^1.10.0",
         "zone.js": "~0.10.2"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~0.803.19",
-        "@angular/cli": "~8.3.19",
+        "@angular-devkit/build-angular": "~0.803.21",
+        "@angular/cli": "~8.3.21",
         "@angular/compiler-cli": "~8.2.14",
         "@angular/language-service": "~8.2.14",
         "@archiveboy/toolbox": "^0.0.1",
         "@types/node": "~12.12.14",
-        "codelyzer": "^5.2.0",
-        "electron": "^7.1.2",
+        "codelyzer": "^5.2.1",
+        "electron": "^7.1.7",
         "protractor": "~5.4.2"
     }
 }

@@ -17,7 +17,7 @@
     },
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
-        "electron": "^7.1.2",
+        "electron": "^7.1.7",
         "electron-devtools-installer": "^2.2.4",
         "electron-webpack": "^2.7.4",
         "wait-on": "^3.3.0"

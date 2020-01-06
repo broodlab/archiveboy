@@ -1,23 +1,26 @@
 {
-    "name": "@archiveboy/api-local",
-    "version": "0.0.1",
-    "main": "dist/main.js",
-    "scripts": {
-        "build": "gulp build",
-        "dev": "gulp dev",
-        "dev-e2e-test": "gulp dev-e2e-test",
-        "dev-integration-test": "gulp dev-integration-test",
-        "dev-unit-test": "gulp dev-unit-test",
-        "lint": "gulp lint",
-        "run-e2e-tests": "gulp run-e2e-tests",
-        "run-integration-tests": "gulp run-integration-tests",
-        "run-unit-tests": "gulp run-unit-tests",
-        "uplate": "ncu -u"
-    },
-    "dependencies": {
-        "@archiveboy/api": "^0.0.1"
-    },
-    "devDependencies": {
-        "@archiveboy/toolbox": "^0.0.1"
-    }
+  "name": "@archiveboy/api-local",
+  "version": "0.0.1",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "dev-e2e-test": "gulp dev-e2e-test",
+    "dev-integration-test": "gulp dev-integration-test",
+    "dev-unit-test": "gulp dev-unit-test",
+    "lint": "gulp lint",
+    "run-e2e-tests": "gulp run-e2e-tests",
+    "run-integration-tests": "gulp run-integration-tests",
+    "run-unit-tests": "gulp run-unit-tests",
+    "uplate": "ncu -u"
+  },
+  "dependencies": {
+    "@archiveboy/api": "^0.0.1"
+  },
+  "devDependencies": {
+    "@archiveboy/toolbox": "^0.0.1"
+  },
+  "__processed_by_ivy_ngcc__": {
+    "main": "8.2.14"
+  }
 }
