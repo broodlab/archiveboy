@@ -5,4 +5,4 @@ install:
     - npm i
 script:
     - lerna bootstrap
-    - lerna run build
+    - lerna run build --stream
