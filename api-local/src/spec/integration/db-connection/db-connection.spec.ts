@@ -1,5 +1,5 @@
+import {closeDbConnection, getDbConnection, initDbConnection} from "../../../main/db-connection";
 import {expect} from "chai";
-import {initDbConnection, getDbConnection, closeDbConnection} from "../../../main/db-connection";
 
 describe("'db-connection' spec", () => {
     describe("The database connection", () => {

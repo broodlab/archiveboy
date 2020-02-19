@@ -1,5 +1,5 @@
-import {FileEntity, TestEntity} from "../entities";
 import {Connection, ConnectionOptions, createConnection} from "typeorm";
+import {FileEntity, TestEntity} from "../entities";
 
 const dbConnectionOptions: ConnectionOptions = {
     database: "database.sqlite",
@@ -9,7 +9,7 @@ const dbConnectionOptions: ConnectionOptions = {
     type: "sqlite"
 };
 let dbConnection: Connection;
-let dbConnectionEstablished: boolean = false;
+let dbConnectionEstablished = false;
 
 export const initDbConnection = async () => {
     if (dbConnectionEstablished) {
