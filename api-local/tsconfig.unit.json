@@ -1,4 +1,9 @@
 {
     "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": ["es2015"]
+    },
     "exclude": ["src/main", "src/spec/e2e", "src/spec/integration"]
 }
