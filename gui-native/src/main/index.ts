@@ -1,11 +1,16 @@
 import {BrowserWindow, app, dialog, ipcMain, screen} from "electron";
 import installExtension, {REDUX_DEVTOOLS} from "electron-devtools-installer";
+import {api} from "@archiveboy/api-local";
 
 let browserWindow;
 
-function createWindow() {
+global["api"] = api;
+
+async function createWindow() {
     const electronScreen = screen;
     const screenSize = electronScreen.getPrimaryDisplay().workAreaSize;
+
+    await api.init();
 
     browserWindow = new BrowserWindow({
         x: 0,
@@ -34,15 +39,16 @@ try {
 
     app.on("ready", createWindow);
 
-    app.on("window-all-closed", () => {
+    app.on("window-all-closed", async () => {
+        await api.destroy();
         if (process.platform !== "darwin") {
             app.quit();
         }
     });
 
-    app.on("activate", () => {
+    app.on("activate", async () => {
         if (browserWindow === null) {
-            createWindow();
+            await createWindow();
         }
     });
 } catch (e) {

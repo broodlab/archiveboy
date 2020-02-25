@@ -1,8 +1,8 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {IFile} from "@archiveboy/api";
+import {IFileMetadata} from "@archiveboy/api";
 
 @Entity()
-export class FileEntity implements IFile {
+export class FileMetadataEntity implements IFileMetadata {
     @PrimaryGeneratedColumn()
     id: number;
 

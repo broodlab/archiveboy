@@ -1,9 +1,9 @@
 import {Connection, ConnectionOptions, createConnection} from "typeorm";
-import {FileEntity, TestEntity} from "../entities";
+import {FileMetadataEntity, TestEntity} from "../entities";
 
 const dbConnectionOptions: ConnectionOptions = {
     database: "database.sqlite",
-    entities: [FileEntity, TestEntity],
+    entities: [FileMetadataEntity, TestEntity],
     logging: false,
     synchronize: true,
     type: "sqlite"

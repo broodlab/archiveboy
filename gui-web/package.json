@@ -1,5 +1,5 @@
 {
-    "name": "gui-web",
+    "name": "@archiveboy/gui-web",
     "scripts": {
         "build": "npm run configure-target-env-electron-renderer && gulp build",
         "configure-target-env-electron-renderer": "gulp configure-target-env-electron-renderer",

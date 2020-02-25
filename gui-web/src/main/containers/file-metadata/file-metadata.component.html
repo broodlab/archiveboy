@@ -1,3 +1,3 @@
 <button (click)="selectFiles()">Select Directory</button>
 <div>Files in directory:</div>
-<ab-file-list [files]="filesInDirectory$ | async"></ab-file-list>
+<ab-file-list [files]="fileMetadata$ | async"></ab-file-list>

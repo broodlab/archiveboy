@@ -6,13 +6,13 @@ export const initialState: ApplicationState = {
     directorySelectionInProgress: false
 };
 
-const onSelectDirectory = state => ({
+const onSelectDirectory = () => ({
     directorySelectionInProgress: true
 });
 
 const onDirectorySelectionSucceeded = state => state;
 
-const onDirectorySelectionFinalized = state => ({
+const onDirectorySelectionFinalized = () => ({
     directorySelectionInProgress: false
 });
 

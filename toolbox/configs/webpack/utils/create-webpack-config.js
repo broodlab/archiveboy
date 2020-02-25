@@ -17,6 +17,9 @@ module.exports.createWebpackConfig = ({entry, outputFilePath, tsconfigFilePath})
                 }
             ]
         },
+        node: {
+            __dirname: false
+        },
         output: {
             filename: outputFilePath,
             libraryTarget: "umd"

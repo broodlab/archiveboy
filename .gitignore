@@ -1,4 +1,5 @@
 .directory
+*.sqlite
 *.iml
 .idea
 dist

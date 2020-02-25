@@ -1,5 +1,5 @@
 {
-    "name": "gui-native",
+    "name": "@archiveboy/gui-native",
     "scripts": {
         "build": "gulp build",
         "clean": "rm -Rf node_modules",
@@ -13,13 +13,21 @@
         "run-e2e-tests": "gulp run-e2e-tests",
         "run-integration-tests": "gulp run-integration-tests",
         "run-unit-tests": "gulp run-unit-tests",
-        "uplate": "ncu -u"
+        "uplate": "ncu -u",
+        "install-app-deps": "electron-builder install-app-deps"
     },
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
         "electron": "^7.1.7",
-        "electron-devtools-installer": "^2.2.4",
+        "electron-builder": "^22.1.0",
         "electron-webpack": "^2.7.4",
         "wait-on": "^3.3.0"
+    },
+    "dependencies": {
+        "@archiveboy/api": "^0.0.1",
+        "@archiveboy/api-local": "^0.0.1",
+        "electron-devtools-installer": "^2.2.4",
+        "sqlite3": "^4.1.0",
+        "typeorm": "0.2.20"
     }
 }

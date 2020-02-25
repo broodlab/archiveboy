@@ -1,2 +1,2 @@
-export * from "./file";
+export * from "./file-metadata";
 export * from "./test";

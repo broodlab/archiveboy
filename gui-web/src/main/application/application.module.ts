@@ -4,7 +4,7 @@ import {CommonModule} from "@angular/common";
 import {DirectorySelectionEffects} from "./directory-selection.effects";
 import {DirectorySelectionService} from "./directory-selection.service";
 import {EffectsModule} from "@ngrx/effects";
-import {FilesModule} from "../containers/files/files.module";
+import {FileMetadataModule} from "../containers/file-metadata/file-metadata.module";
 import {NgModule} from "@angular/core";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {StoreModule} from "@ngrx/store";
@@ -17,7 +17,7 @@ import {applicationReducer} from "./application.reducer";
         BrowserModule,
         CommonModule,
         EffectsModule.forRoot([DirectorySelectionEffects]),
-        FilesModule,
+        FileMetadataModule,
         StoreModule.forRoot({application: applicationReducer}),
         StoreDevtoolsModule.instrument({
             maxAge: 25

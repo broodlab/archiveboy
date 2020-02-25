@@ -1,16 +1,16 @@
 {
-  "name": "@archiveboy/api",
-  "version": "0.0.1",
-  "main": "dist/main.js",
-  "scripts": {
-    "build": "gulp build",
-    "lint": "gulp lint",
-    "uplate": "ncu -u"
-  },
-  "devDependencies": {
-    "@archiveboy/toolbox": "^0.0.1"
-  },
-  "__processed_by_ivy_ngcc__": {
-    "main": "8.2.14"
-  }
+    "name": "@archiveboy/api",
+    "version": "0.0.1",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "gulp build",
+        "lint": "gulp lint",
+        "uplate": "ncu -u"
+    },
+    "devDependencies": {
+        "@archiveboy/toolbox": "^0.0.1"
+    },
+    "__processed_by_ivy_ngcc__": {
+        "main": "8.2.14"
+    }
 }

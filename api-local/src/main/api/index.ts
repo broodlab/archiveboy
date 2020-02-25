@@ -1,11 +1,12 @@
-import {IFile} from "@archiveboy/api";
-import {Observable} from "rxjs";
-import {provideFilesInDirectory} from "../files";
-
-export interface Api {
-    provideFilesInDirectory: (directoryPath: string) => Observable<IFile[]>;
-}
+import {clearFileMetadata, listMetadataOfFilesInDirectory, provideFileMetadata, storeFileMetadata} from "../file-metadata";
+import {closeDbConnection, initDbConnection} from "../db-connection";
+import {Api} from "@archiveboy/api";
 
 export const api: Api = {
-    provideFilesInDirectory
+    init: initDbConnection,
+    destroy: closeDbConnection,
+    listMetadataOfFilesInDirectory,
+    storeFileMetadata,
+    provideFileMetadata,
+    clearFileMetadata
 };
