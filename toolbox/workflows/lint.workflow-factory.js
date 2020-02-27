@@ -1,4 +1,7 @@
 const {createLintJsFilesTask, createLintTsFilesTask} = require("../tasks");
 const {parallel} = require("gulp");
 
-exports.createLintWorkflow = moduleName => parallel(createLintJsFilesTask(moduleName), createLintTsFilesTask(moduleName));
+const failAfterError = true;
+
+exports.createLintWorkflow = moduleName =>
+    parallel(createLintJsFilesTask(moduleName, failAfterError), createLintTsFilesTask(moduleName, failAfterError));
