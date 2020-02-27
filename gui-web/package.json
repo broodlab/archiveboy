@@ -1,18 +1,18 @@
 {
     "name": "@archiveboy/gui-web",
     "scripts": {
-        "build": "npm run configure-target-env-electron-renderer && gulp build",
-        "configure-target-env-electron-renderer": "gulp configure-target-env-electron-renderer",
-        "configure-target-env-web": "gulp configure-target-env-web",
+        "build": "npm run configure-target-env-electron-renderer && gulp build --color",
+        "configure-target-env-electron-renderer": "gulp configure-target-env-electron-renderer --color",
+        "configure-target-env-web": "gulp configure-target-env-web --color",
         "dev": "npm run configure-target-env-web && ng serve",
         "dev-electron-renderer": "npm run configure-target-env-electron-renderer && ng serve",
-        "dev-integration-test": "gulp dev-integration-test",
-        "dev-unit-test": "gulp dev-unit-test",
-        "lint": "gulp lint",
+        "dev-integration-test": "gulp dev-integration-test --color",
+        "dev-unit-test": "gulp dev-unit-test --color",
+        "lint": "gulp lint --color",
         "ng": "ng",
         "run-e2e-tests": "npx webdriver-manager update --versions.chrome 74.0.3729.6 && ng e2e --webdriverUpdate=false",
-        "run-integration-tests": "gulp run-integration-tests",
-        "run-unit-tests": "gulp run-unit-tests",
+        "run-integration-tests": "gulp run-integration-tests --color",
+        "run-unit-tests": "gulp run-unit-tests --color",
         "uplate": "ncu -u"
     },
     "dependencies": {
