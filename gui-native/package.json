@@ -9,12 +9,13 @@
         "dev-e2e-test": "gulp dev-e2e-test --color",
         "dev-integration-test": "gulp dev-integration-test --color",
         "dev-unit-test": "gulp dev-unit-test --color",
+        "install-app-deps": "electron-builder install-app-deps",
         "lint": "gulp lint --color",
+        "postinstall": "npm run install-app-deps",
         "run-e2e-tests": "gulp run-e2e-tests --color",
         "run-integration-tests": "gulp run-integration-tests --color",
         "run-unit-tests": "gulp run-unit-tests --color",
-        "uplate": "ncu -u",
-        "install-app-deps": "electron-builder install-app-deps"
+        "uplate": "ncu -u"
     },
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
