@@ -1,15 +1,11 @@
 {
     "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
-    "angularCompilerOptions": {
-        "enableIvy": true
-    },
     "compilerOptions": {
         "baseUrl": ".",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "importHelpers": true,
         "lib": ["dom", "es2018"],
-        "module": "esnext",
         "paths": {
             "@archiveboy/api-client/*": ["./src/api-local-client/*"]
         },
@@ -17,5 +13,6 @@
         "typeRoots": ["node_modules/@types"]
     },
     "exclude": ["node_modules", "src/spec"],
-    "include": ["src/main/**/*.ts"]
+    "files": ["src/main/index.ts", "src/main/polyfills.ts"],
+    "include": ["src/main/**/*.d.ts"]
 }
