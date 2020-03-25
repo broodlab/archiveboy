@@ -1,7 +1,7 @@
 import {Component, Input} from "@angular/core";
 
 @Component({
-    selector: "ab-file-list",
+    selector: "a8y-file-list",
     styleUrls: ["./file-list.component.scss"],
     templateUrl: "./file-list.component.html"
 })

@@ -6,7 +6,7 @@ import {fileMetadataLoad} from "./file-metadata.actions";
 import {selectDirectory} from "../../shared/actions";
 
 @Component({
-    selector: "ab-file-metadata",
+    selector: "a8y-file-metadata",
     styleUrls: ["./file-metadata.component.scss"],
     templateUrl: "./file-metadata.component.html"
 })

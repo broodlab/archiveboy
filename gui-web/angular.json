@@ -12,7 +12,7 @@
             },
             "root": "",
             "sourceRoot": "src/main",
-            "prefix": "ab",
+            "prefix": "a8y",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
