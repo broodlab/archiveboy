@@ -2,7 +2,7 @@ language: node_js
 node_js:
     - "12"
 install:
-    - npm i
+    - npm ci
 script:
     - lerna bootstrap
     - lerna run build --stream
