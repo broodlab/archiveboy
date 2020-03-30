@@ -12,22 +12,22 @@ module.exports.createWebpackConfig = ({entry, outputFilePath, tsconfigFilePath})
                     test: /\.tsx?$/,
                     loader: "ts-loader",
                     options: {
-                        configFile: tsconfigFilePath
-                    }
-                }
-            ]
+                        configFile: tsconfigFilePath,
+                    },
+                },
+            ],
         },
         node: {
-            __dirname: false
+            __dirname: false,
         },
         output: {
             filename: outputFilePath,
-            libraryTarget: "umd"
+            libraryTarget: "umd",
         },
         resolve: {
             extensions: [".ts", ".tsx", ".js"],
-            plugins: [new TsconfigPathsPlugin({configFile: tsconfigFilePath})]
+            plugins: [new TsconfigPathsPlugin({configFile: tsconfigFilePath})],
         },
-        target: "node"
+        target: "node",
     };
 };

@@ -2,7 +2,7 @@ const {createCompileTsFilesTask, createDeleteDistFolderTask, createRunUnitTestsT
 const {series, watch} = require("gulp");
 const {logWatchFilesChanged} = require("../utils");
 
-exports.createDevUnitTestWorkflow = moduleName => {
+exports.createDevUnitTestWorkflow = (moduleName) => {
     const devUnitTestTasks = series(
         createDeleteDistFolderTask(moduleName),
         createCompileTsFilesTask(moduleName, "unit.js"),

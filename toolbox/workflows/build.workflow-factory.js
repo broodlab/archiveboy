@@ -3,12 +3,12 @@ const {
     createDeleteDistFolderTask,
     createLintTsFilesTask,
     createRunIntegrationTestsTask,
-    createRunUnitTestsTask
+    createRunUnitTestsTask,
 } = require("../tasks");
 const {parallel, series} = require("gulp");
 const failAfterError = true;
 
-exports.createBuildWorkflow = moduleName =>
+exports.createBuildWorkflow = (moduleName) =>
     series(
         createDeleteDistFolderTask(moduleName),
         parallel(

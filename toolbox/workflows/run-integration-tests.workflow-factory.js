@@ -3,7 +3,7 @@ const {series} = require("gulp");
 
 const failAfterError = true;
 
-exports.createRunIntegrationTestsWorkflow = moduleName =>
+exports.createRunIntegrationTestsWorkflow = (moduleName) =>
     series(
         createDeleteDistFolderTask(moduleName),
         createCompileTsFilesTask(moduleName, "integration.js", failAfterError),

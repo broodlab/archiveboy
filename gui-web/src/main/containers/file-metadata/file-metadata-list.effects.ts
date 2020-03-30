@@ -13,7 +13,7 @@ export class FileMetadataListEffects {
             ofType(directorySelectionSucceeded.type),
             mergeMap(({payload}) =>
                 from(this.fileMetadataService.listMetadataOfFilesInDirectory(payload)).pipe(
-                    concatMap(fileMetadata => {
+                    concatMap((fileMetadata) => {
                         return [{type: fileMetadataListSuccess.type, payload: fileMetadata}, {type: directorySelectionFinalized.type}];
                     }),
                     catchError(() => EMPTY)

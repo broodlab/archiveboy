@@ -6,7 +6,7 @@ const {
     createLintWorkflow,
     createRunE2eTestsWorkflow,
     createRunIntegrationTestsWorkflow,
-    createRunUnitTestsWorkflow
+    createRunUnitTestsWorkflow,
 } = require("@archiveboy/toolbox/workflows");
 
 const moduleName = "gui-native";
@@ -19,5 +19,5 @@ module.exports = {
     lint: createLintWorkflow(moduleName),
     "run-e2e-tests": createRunE2eTestsWorkflow(moduleName),
     "run-integration-tests": createRunIntegrationTestsWorkflow(moduleName),
-    "run-unit-tests": createRunUnitTestsWorkflow(moduleName)
+    "run-unit-tests": createRunUnitTestsWorkflow(moduleName),
 };

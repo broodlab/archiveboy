@@ -5,5 +5,5 @@ const moduleName = "api";
 
 module.exports = {
     build: createBuildWorkflow(moduleName),
-    lint: createLintWorkflow(moduleName)
+    lint: createLintWorkflow(moduleName),
 };

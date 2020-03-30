@@ -12,7 +12,7 @@ export class DirectorySelectionEffects {
             ofType(selectDirectory.type),
             mergeMap(() =>
                 this.directorySelectionService.selectDirectory().pipe(
-                    map(directoryPath => {
+                    map((directoryPath) => {
                         return {type: directorySelectionSucceeded.type, payload: directoryPath};
                     }),
                     catchError(() => EMPTY)

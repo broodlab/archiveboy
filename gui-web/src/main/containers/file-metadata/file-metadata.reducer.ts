@@ -3,12 +3,12 @@ import {fileMetadataListSuccess, fileMetadataLoadSuccess} from "./file-metadata.
 import {FileMetadataState} from "./file-metadata.state";
 
 export const initialState: FileMetadataState = {
-    fileMetadata: []
+    fileMetadata: [],
 };
 
 const onIncomingFileMetadata = (state, action) => {
     return {
-        fileMetadata: action.payload
+        fileMetadata: action.payload,
     };
 };
 

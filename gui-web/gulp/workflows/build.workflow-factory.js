@@ -3,14 +3,14 @@ const {
     createDeleteDistFolderTask,
     createLintTsFilesTask,
     createRunIntegrationTestsTask,
-    createRunUnitTestsTask
+    createRunUnitTestsTask,
 } = require("@archiveboy/toolbox/tasks");
 const {parallel, series} = require("gulp");
 const {createBuildGuiWebTask} = require("../tasks");
 
 const failAfterError = true;
 
-exports.createBuildWorkflow = moduleName =>
+exports.createBuildWorkflow = (moduleName) =>
     series(
         createDeleteDistFolderTask(moduleName),
         parallel(

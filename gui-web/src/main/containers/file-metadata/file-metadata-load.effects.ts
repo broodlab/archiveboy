@@ -12,7 +12,7 @@ export class FileMetadataLoadEffects {
             ofType(fileMetadataLoad.type),
             mergeMap(() =>
                 this.fileMetadataService.provideFileMetadata().pipe(
-                    map(fileMetadata => {
+                    map((fileMetadata) => {
                         return {type: fileMetadataLoadSuccess.type, payload: fileMetadata};
                     }),
                     catchError(() => EMPTY)

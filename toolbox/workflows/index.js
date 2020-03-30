@@ -18,7 +18,7 @@ module.exports.createRunE2eTestsWorkflow = createRunE2eTestsWorkflow;
 module.exports.createRunIntegrationTestsWorkflow = createRunIntegrationTestsWorkflow;
 module.exports.createRunUnitTestsWorkflow = createRunUnitTestsWorkflow;
 
-module.exports.createWorkflows = moduleName => {
+module.exports.createWorkflows = (moduleName) => {
     return {
         build: createBuildWorkflow(moduleName),
         dev: createDevWorkflow(moduleName),
@@ -28,6 +28,6 @@ module.exports.createWorkflows = moduleName => {
         lint: createLintWorkflow(moduleName),
         "run-e2e-tests": createRunE2eTestsWorkflow(moduleName),
         "run-integration-tests": createRunIntegrationTestsWorkflow(moduleName),
-        "run-unit-tests": createRunUnitTestsWorkflow(moduleName)
+        "run-unit-tests": createRunUnitTestsWorkflow(moduleName),
     };
 };

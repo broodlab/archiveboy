@@ -1,14 +1,14 @@
 const {
     createBuildWorkflow,
     createConfigureTargetEnvironmentElectronRendererWorkflow,
-    createConfigureTargetEnvironmentElectronWebWorkflow
+    createConfigureTargetEnvironmentElectronWebWorkflow,
 } = require("./gulp/workflows");
 const {
     createDevIntegrationTestWorkflow,
     createDevUnitTestWorkflow,
     createLintWorkflow,
     createRunIntegrationTestsWorkflow,
-    createRunUnitTestsWorkflow
+    createRunUnitTestsWorkflow,
 } = require("@archiveboy/toolbox/workflows");
 
 const moduleName = "gui-web";
@@ -21,5 +21,5 @@ module.exports = {
     "dev-unit-test": createDevUnitTestWorkflow(moduleName),
     lint: createLintWorkflow(moduleName),
     "run-integration-tests": createRunIntegrationTestsWorkflow(moduleName),
-    "run-unit-tests": createRunUnitTestsWorkflow(moduleName)
+    "run-unit-tests": createRunUnitTestsWorkflow(moduleName),
 };

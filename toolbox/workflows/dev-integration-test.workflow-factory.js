@@ -2,7 +2,7 @@ const {createCompileTsFilesTask, createDeleteDistFolderTask, createRunIntegratio
 const {series, watch} = require("gulp");
 const {logWatchFilesChanged} = require("../utils");
 
-exports.createDevIntegrationTestWorkflow = moduleName => {
+exports.createDevIntegrationTestWorkflow = (moduleName) => {
     const devIntegrationTestTasks = series(
         createDeleteDistFolderTask(moduleName),
         createCompileTsFilesTask(moduleName, "integration.js"),

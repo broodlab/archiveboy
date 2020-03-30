@@ -3,17 +3,17 @@ import {directorySelectionFinalized, directorySelectionSucceeded, selectDirector
 import {ApplicationState} from "../shared/models/states";
 
 export const initialState: ApplicationState = {
-    directorySelectionInProgress: false
+    directorySelectionInProgress: false,
 };
 
 const onSelectDirectory = () => ({
-    directorySelectionInProgress: true
+    directorySelectionInProgress: true,
 });
 
-const onDirectorySelectionSucceeded = state => state;
+const onDirectorySelectionSucceeded = (state) => state;
 
 const onDirectorySelectionFinalized = () => ({
-    directorySelectionInProgress: false
+    directorySelectionInProgress: false,
 });
 
 export const applicationReducer = createReducer(

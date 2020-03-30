@@ -17,9 +17,9 @@ import {fileMetadataReducer} from "./file-metadata.reducer";
         CommonModule,
         EffectsModule.forFeature([FileMetadataListEffects, FileMetadataLoadEffects]),
         FileListModule,
-        StoreModule.forFeature("fileMetadata", fileMetadataReducer)
+        StoreModule.forFeature("fileMetadata", fileMetadataReducer),
     ],
     exports: [FileMetadataComponent],
-    providers: [FileMetadataService]
+    providers: [FileMetadataService],
 })
 export class FileMetadataModule {}

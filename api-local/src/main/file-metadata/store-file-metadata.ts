@@ -5,7 +5,7 @@ import {getDbConnection} from "../db-connection";
 export const storeFileMetadata = async (fileMetadata: IFileMetadata[]): Promise<void> => {
     try {
         await getDbConnection().manager.save(
-            fileMetadata.map(fileMetadata => {
+            fileMetadata.map((fileMetadata) => {
                 const fileMetadataEntity = new FileMetadataEntity();
                 fileMetadataEntity.path = fileMetadata.path;
                 return fileMetadataEntity;

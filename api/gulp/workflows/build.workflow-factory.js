@@ -3,7 +3,7 @@ const {series} = require("gulp");
 
 const failAfterError = true;
 
-exports.createBuildWorkflow = moduleName =>
+exports.createBuildWorkflow = (moduleName) =>
     series(
         createDeleteDistFolderTask(moduleName),
         createCompileTsFilesTask(moduleName, "main.js", failAfterError),

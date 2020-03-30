@@ -10,14 +10,14 @@ exports.config = {
     specs: ["./src/**/*.e2e-spec.ts"],
     capabilities: {
         browserName: "chrome",
-        chromeOptions
+        chromeOptions,
     },
     directConnect: true,
     baseUrl: "http://localhost:4200/",
     framework: "mocha",
     onPrepare() {
         require("ts-node").register({
-            project: require("path").join(__dirname, "../tsconfig.spec.json")
+            project: require("path").join(__dirname, "../tsconfig.spec.json"),
         });
-    }
+    },
 };

@@ -18,8 +18,8 @@ async function createWindow() {
         width: screenSize.width,
         height: screenSize.height,
         webPreferences: {
-            nodeIntegration: true
-        }
+            nodeIntegration: true,
+        },
     });
 
     browserWindow.loadURL("http://localhost:4200");
@@ -30,8 +30,8 @@ async function createWindow() {
     });
 
     installExtension(REDUX_DEVTOOLS)
-        .then(name => console.log(`Added Extension:  ${name}`))
-        .catch(err => console.log("An error occurred: ", err));
+        .then((name) => console.log(`Added Extension:  ${name}`))
+        .catch((err) => console.log("An error occurred: ", err));
 }
 
 try {
@@ -55,12 +55,12 @@ try {
     throw e;
 }
 
-ipcMain.on("open-file-dialog", event => {
+ipcMain.on("open-file-dialog", (event) => {
     dialog
         .showOpenDialog(browserWindow, {
-            properties: ["openFile", "openDirectory"]
+            properties: ["openFile", "openDirectory"],
         })
-        .then(files => {
+        .then((files) => {
             if (files) {
                 event.sender.send("selected-directory", files);
             }

@@ -8,13 +8,13 @@ import {selectDirectory} from "../../shared/actions";
 @Component({
     selector: "a8y-file-metadata",
     styleUrls: ["./file-metadata.component.scss"],
-    templateUrl: "./file-metadata.component.html"
+    templateUrl: "./file-metadata.component.html",
 })
 export class FileMetadataComponent implements OnInit {
     fileMetadata$: Observable<string[]>;
 
     constructor(private store: Store<{fileMetadata: FileMetadataState}>) {
-        this.fileMetadata$ = store.pipe(select(state => state.fileMetadata.fileMetadata));
+        this.fileMetadata$ = store.pipe(select((state) => state.fileMetadata.fileMetadata));
     }
 
     ngOnInit() {

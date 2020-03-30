@@ -22,9 +22,9 @@ import {applicationReducer} from "./application.reducer";
         FlexLayoutModule,
         StoreModule.forRoot({application: applicationReducer}),
         StoreDevtoolsModule.instrument({
-            maxAge: 25
-        })
+            maxAge: 25,
+        }),
     ],
-    providers: [DirectorySelectionService]
+    providers: [DirectorySelectionService],
 })
 export class ApplicationModule {}

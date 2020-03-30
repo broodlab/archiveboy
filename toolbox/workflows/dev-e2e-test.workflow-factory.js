@@ -2,7 +2,7 @@ const {createCompileTsFilesTask, createDeleteDistFolderTask, createRunE2eTestsTa
 const {series, watch} = require("gulp");
 const {logWatchFilesChanged} = require("../utils");
 
-exports.createDevE2eTestWorkflow = moduleName => {
+exports.createDevE2eTestWorkflow = (moduleName) => {
     const devE2eTestTasks = series(
         createDeleteDistFolderTask(moduleName),
         createCompileTsFilesTask(moduleName, "e2e.js"),

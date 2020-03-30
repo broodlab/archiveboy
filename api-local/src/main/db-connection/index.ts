@@ -6,7 +6,7 @@ const dbConnectionOptions: ConnectionOptions = {
     entities: [FileMetadataEntity, TestEntity],
     logging: false,
     synchronize: true,
-    type: "sqlite"
+    type: "sqlite",
 };
 let dbConnection: Connection;
 let dbConnectionEstablished = false;

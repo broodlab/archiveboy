@@ -11,7 +11,7 @@ const createLintJsFilesTask = (moduleName, failAfterError) =>
             .pipe(
                 eslint({
                     configFile: "eslint-js.config.js",
-                    fix
+                    fix,
                 })
             )
             .pipe(eslint.format())

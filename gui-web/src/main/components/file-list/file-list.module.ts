@@ -6,6 +6,6 @@ import {NgModule} from "@angular/core";
 @NgModule({
     declarations: [FileListComponent],
     exports: [FileListComponent],
-    imports: [BrowserModule, CommonModule]
+    imports: [BrowserModule, CommonModule],
 })
 export class FileListModule {}

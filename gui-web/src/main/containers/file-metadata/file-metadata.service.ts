@@ -10,10 +10,10 @@ export class FileMetadataService {
         await api.clearFileMetadata();
         const fileMetadata = await api.listMetadataOfFilesInDirectory(directoryPath);
         await api.storeFileMetadata(fileMetadata);
-        return fileMetadata.map(fileMetadata => fileMetadata.path);
+        return fileMetadata.map((fileMetadata) => fileMetadata.path);
     }
 
     provideFileMetadata(): Observable<string[]> {
-        return from(api.provideFileMetadata()).pipe(map((fileMetadata: IFileMetadata[]) => fileMetadata.map(fileMetadata => fileMetadata.path)));
+        return from(api.provideFileMetadata()).pipe(map((fileMetadata: IFileMetadata[]) => fileMetadata.map((fileMetadata) => fileMetadata.path)));
     }
 }

@@ -8,5 +8,5 @@ export const api: Api = {
     listMetadataOfFilesInDirectory,
     storeFileMetadata,
     provideFileMetadata,
-    clearFileMetadata
+    clearFileMetadata,
 };
