@@ -28,10 +28,10 @@
         "@angular/router": "~9.1.0",
         "@archiveboy/api": "^0.0.1",
         "@archiveboy/api-local": "^0.0.1",
-        "@ngrx/effects": "^9.0.0",
-        "@ngrx/store": "^9.0.0",
-        "@ngrx/store-devtools": "^9.0.0",
-        "rxjs": "~6.5.4",
+        "@ngrx/effects": "^9.1.0",
+        "@ngrx/store": "^9.1.0",
+        "@ngrx/store-devtools": "^9.1.0",
+        "rxjs": "~6.5.5",
         "tslib": "^1.11.1",
         "zone.js": "~0.10.3"
     },
@@ -43,7 +43,7 @@
         "@archiveboy/toolbox": "^0.0.1",
         "@types/node": "^12.12.6",
         "codelyzer": "^5.2.2",
-        "electron": "^8.2.0",
+        "electron": "^8.2.1",
         "protractor": "~5.4.3"
     }
 }
