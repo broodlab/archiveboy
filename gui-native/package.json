@@ -19,10 +19,10 @@
     },
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
-        "electron": "^8.2.1",
-        "electron-builder": "^22.4.1",
+        "electron": "^8.2.3",
+        "electron-builder": "^22.5.1",
         "electron-webpack": "^2.8.2",
-        "wait-on": "^4.0.1"
+        "wait-on": "^4.0.2"
     },
     "dependencies": {
         "@archiveboy/api": "^0.0.1",
