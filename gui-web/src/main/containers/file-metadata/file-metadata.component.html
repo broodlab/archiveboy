@@ -1,3 +1,3 @@
-<button (click)="selectFiles()">Select Directory</button>
+<button mat-raised-button color="accent" (click)="selectFiles()">Select Directory</button>
 <div>Files in directory:</div>
 <a8y-file-list [files]="fileMetadata$ | async"></a8y-file-list>

@@ -6,6 +6,7 @@ import {FileMetadataComponent} from "./file-metadata.component";
 import {FileMetadataListEffects} from "./file-metadata-list.effects";
 import {FileMetadataLoadEffects} from "./file-metadata-load.effects";
 import {FileMetadataService} from "./file-metadata.service";
+import {MatButtonModule} from "@angular/material/button";
 import {NgModule} from "@angular/core";
 import {StoreModule} from "@ngrx/store";
 import {fileMetadataReducer} from "./file-metadata.reducer";
@@ -17,6 +18,7 @@ import {fileMetadataReducer} from "./file-metadata.reducer";
         CommonModule,
         EffectsModule.forFeature([FileMetadataListEffects, FileMetadataLoadEffects]),
         FileListModule,
+        MatButtonModule,
         StoreModule.forFeature("fileMetadata", fileMetadataReducer),
     ],
     exports: [FileMetadataComponent],
