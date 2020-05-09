@@ -11,21 +11,23 @@ import {NgModule} from "@angular/core";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {StoreModule} from "@ngrx/store";
 import {applicationReducer} from "./application.reducer";
+import {SideNavModule} from "../containers/side-nav/side-nav.module";
 
 @NgModule({
     bootstrap: [ApplicationComponent],
     declarations: [ApplicationComponent],
     imports: [
+        BrowserAnimationsModule,
         BrowserModule,
         CommonModule,
         EffectsModule.forRoot([DirectorySelectionEffects]),
         FileMetadataModule,
         FlexLayoutModule,
+        SideNavModule,
         StoreModule.forRoot({application: applicationReducer}),
         StoreDevtoolsModule.instrument({
             maxAge: 25,
         }),
-        BrowserAnimationsModule,
     ],
     providers: [DirectorySelectionService],
 })

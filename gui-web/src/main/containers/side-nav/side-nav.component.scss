@@ -1,0 +1,23 @@
+nav {
+    padding-top: 5px;
+    background-color: #2c2c2c;
+}
+
+a {
+    color: #808080;
+    display: block;
+    font-size: 38px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+
+    :hover,
+    &.selected {
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    &.selected {
+        background: url("/assets/sidenav-border.png") no-repeat;
+    }
+}
