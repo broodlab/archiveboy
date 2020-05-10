@@ -8,10 +8,10 @@ import {EffectsModule} from "@ngrx/effects";
 import {FileMetadataModule} from "../containers/file-metadata/file-metadata.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {NgModule} from "@angular/core";
+import {SideNavModule} from "../containers/side-nav/side-nav.module";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {StoreModule} from "@ngrx/store";
 import {applicationReducer} from "./application.reducer";
-import {SideNavModule} from "../containers/side-nav/side-nav.module";
 
 @NgModule({
     bootstrap: [ApplicationComponent],
