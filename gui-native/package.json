@@ -19,16 +19,16 @@
     },
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
-        "electron": "^8.2.3",
-        "electron-builder": "^22.5.1",
+        "electron": "^8.3.0",
+        "electron-builder": "^22.6.0",
         "electron-webpack": "^2.8.2",
-        "wait-on": "^4.0.2"
+        "wait-on": "^5.0.0"
     },
     "dependencies": {
         "@archiveboy/api": "^0.0.1",
         "@archiveboy/api-local": "^0.0.1",
         "electron-devtools-installer": "^3.0.0",
-        "sqlite3": "^4.1.1",
+        "sqlite3": "^4.2.0",
         "typeorm": "0.2.24"
     }
 }

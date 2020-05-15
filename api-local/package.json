@@ -20,7 +20,7 @@
     "devDependencies": {
         "@archiveboy/toolbox": "^0.0.1",
         "reflect-metadata": "^0.1.13",
-        "sqlite3": "^4.1.1",
+        "sqlite3": "^4.2.0",
         "typeorm": "^0.2.24"
     },
     "__processed_by_ivy_ngcc__": {
