@@ -1,4 +1,0 @@
-{
-    "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
-    "exclude": ["src/api-local-client", "src/main", "src/spec/e2e", "src/spec/unit"]
-}

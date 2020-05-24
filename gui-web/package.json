@@ -6,13 +6,8 @@
         "configure-target-env-web": "gulp configure-target-env-web --color",
         "dev": "npm run configure-target-env-web && ng serve",
         "dev-electron-renderer": "npm run configure-target-env-electron-renderer && ng serve",
-        "dev-integration-test": "gulp dev-integration-test --color",
-        "dev-unit-test": "gulp dev-unit-test --color",
         "lint": "gulp lint --color",
         "ng": "ng",
-        "run-e2e-tests": "npx webdriver-manager update --versions.chrome 74.0.3729.6 && ng e2e --webdriverUpdate=false",
-        "run-integration-tests": "gulp run-integration-tests --color",
-        "run-unit-tests": "gulp run-unit-tests --color",
         "uplate": "ncu -u"
     },
     "dependencies": {
@@ -44,7 +39,6 @@
         "@archiveboy/toolbox": "^0.0.1",
         "@types/node": "^12.12.6",
         "codelyzer": "^5.2.2",
-        "electron": "^8.3.0",
-        "protractor": "~7.0.0"
+        "electron": "^8.3.0"
     }
 }
