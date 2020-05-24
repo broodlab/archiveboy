@@ -1,0 +1,16 @@
+{
+    "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
+    },
+    "compilerOptions": {
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "lib": ["dom", "es2018"]
+    },
+    "files": ["src/main/index.ts", "src/main/polyfills.ts"],
+    "include": ["src/main/**/*.d.ts"]
+}

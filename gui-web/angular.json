@@ -54,6 +54,9 @@
                                     "maximumError": "5mb"
                                 }
                             ]
+                        },
+                        "web": {
+                            "tsConfig": "tsconfig.web.json"
                         }
                     }
                 },
@@ -65,6 +68,9 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "main:build:production"
+                        },
+                        "web": {
+                            "browserTarget": "main:build:web"
                         }
                     }
                 },

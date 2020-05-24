@@ -3,9 +3,7 @@ const {
     createConfigureTargetEnvironmentElectronRendererWorkflow,
     createConfigureTargetEnvironmentElectronWebWorkflow,
 } = require("./gulp/workflows");
-const {
-    createLintWorkflow,
-} = require("@archiveboy/toolbox/workflows");
+const {createLintWorkflow} = require("@archiveboy/toolbox/workflows");
 
 const moduleName = "gui-web";
 

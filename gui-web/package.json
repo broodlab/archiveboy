@@ -4,7 +4,7 @@
         "build": "npm run configure-target-env-electron-renderer && gulp build --color",
         "configure-target-env-electron-renderer": "gulp configure-target-env-electron-renderer --color",
         "configure-target-env-web": "gulp configure-target-env-web --color",
-        "dev": "npm run configure-target-env-web && ng serve",
+        "dev": "npm run configure-target-env-web && ng serve --configuration=web",
         "dev-electron-renderer": "npm run configure-target-env-electron-renderer && ng serve",
         "lint": "gulp lint --color",
         "ng": "ng",

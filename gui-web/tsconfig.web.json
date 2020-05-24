@@ -2,9 +2,9 @@
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
         "paths": {
-            "@archiveboy/api-client/*": ["./src/api-client/local/*"],
+            "@archiveboy/api-client/*": ["./src/api-client/mock/*"],
             "@archiveboy/gui-extras/api/*": ["./src/gui-extras/api/*"],
-            "@archiveboy/gui-extras/*": ["./src/gui-extras/native/*"]
+            "@archiveboy/gui-extras/*": ["./src/gui-extras/mock/*"]
         }
     },
     "exclude": ["node_modules", "src/spec"]
