@@ -6,9 +6,18 @@
         "configure-target-env-web": "gulp configure-target-env-web --color",
         "dev": "npm run configure-target-env-web && ng serve --configuration=web",
         "dev-electron-renderer": "npm run configure-target-env-electron-renderer && ng serve",
+        "test": "jest --color",
         "lint": "gulp lint --color",
-        "ng": "ng",
         "uplate": "ncu -u"
+    },
+    "jest": {
+        "preset": "jest-preset-angular",
+        "moduleNameMapper": {
+            "@archiveboy/gui-web/(.*)": "<rootDir>/src/main//$1"
+        },
+        "setupFilesAfterEnv": [
+            "<rootDir>/jest.config.ts"
+        ]
     },
     "dependencies": {
         "@angular/animations": "~9.1.7",
@@ -37,8 +46,11 @@
         "@angular/compiler-cli": "~9.1.7",
         "@angular/language-service": "~9.1.7",
         "@archiveboy/toolbox": "^0.0.1",
+        "@types/jest": "^25.2.3",
         "@types/node": "^12.12.6",
         "codelyzer": "^5.2.2",
-        "electron": "^8.3.0"
+        "electron": "^8.3.0",
+        "jest": "^26.0.1",
+        "jest-preset-angular": "^8.2.0"
     }
 }
