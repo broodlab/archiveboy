@@ -7,11 +7,22 @@ import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 import {SideNavComponent} from "./side-nav.component";
 
 @NgModule({
     declarations: [SideNavComponent],
-    imports: [BrowserModule, CommonModule, FlexModule, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatTooltipModule],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        FlexModule,
+        MatButtonModule,
+        MatIconModule,
+        MatListModule,
+        MatSidenavModule,
+        MatTooltipModule,
+        RouterModule,
+    ],
     exports: [SideNavComponent],
 })
 export class SideNavModule {}

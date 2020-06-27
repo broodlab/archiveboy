@@ -6,15 +6,13 @@ body {
     margin: 0;
 }
 
+$division-border: 1px solid #cccccc;
+
 .archivists {
-    background-color: #f3f3f3;
+    border-top: $division-border;
+    border-right: $division-border;
 }
 
-.workbench {
-    padding: 25px;
-}
-
-.status-bar {
-    background-color: darkcyan;
-    height: 20px;
+.files {
+    border-top: $division-border;
 }

@@ -12,12 +12,12 @@ a {
     width: 100%;
 
     :hover,
-    &.selected {
+    &.active {
         color: #ffffff;
         cursor: pointer;
     }
 
-    &.selected {
+    &.active {
         background: url("/assets/sidenav-border.png") no-repeat;
     }
 }

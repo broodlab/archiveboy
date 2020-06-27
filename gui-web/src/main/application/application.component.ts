@@ -4,7 +4,7 @@ import {ApplicationState} from "../shared/models/states";
 import {pairwise} from "rxjs/operators";
 
 @Component({
-    selector: "a8y-root",
+    selector: "a8y-application",
     styleUrls: ["./application.component.scss"],
     templateUrl: "./application.component.html",
 })
