@@ -34,6 +34,7 @@ import {applicationReducer} from "./application.reducer";
         FlexLayoutModule,
         RouterModule.forRoot([
             {path: "workbench", component: WorkbenchComponent},
+            {path: "", redirectTo: "workbench", pathMatch: "full"},
             {path: "tray", component: TrayComponent},
             {path: "trash", component: TrashComponent},
             {path: "settings", component: SettingsComponent},
