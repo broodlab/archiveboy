@@ -18,6 +18,7 @@ async function createWindow() {
         width: screenSize.width,
         height: screenSize.height,
         webPreferences: {
+            enableRemoteModule: true,
             nodeIntegration: true,
         },
     });
