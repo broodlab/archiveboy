@@ -1,4 +1,4 @@
-const configFile = "node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/browser.js";
+const configFile = "node_modules/@angular-devkit/build-angular/src/webpack/configs/browser.js";
 const fs = require("fs");
 
 const configureTargetEnvironment = (target) => {

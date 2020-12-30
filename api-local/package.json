@@ -15,13 +15,13 @@
         "uplate": "ncu -u"
     },
     "dependencies": {
-        "@archiveboy/api": "^0.0.1"
+        "@archiveboy/api": "~0.0.1"
     },
     "devDependencies": {
-        "@archiveboy/toolbox": "^0.0.1",
-        "reflect-metadata": "^0.1.13",
-        "sqlite3": "^5.0.0",
-        "typeorm": "^0.2.26"
+        "@archiveboy/toolbox": "~0.0.1",
+        "reflect-metadata": "~0.1.13",
+        "sqlite3": "~5.0.0",
+        "typeorm": "~0.2.29"
     },
     "__processed_by_ivy_ngcc__": {
         "main": "8.2.14"

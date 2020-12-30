@@ -1,4 +1,4 @@
-import {createReducer, on} from "@ngrx/store";
+import {Action, ActionType, createReducer, on} from "@ngrx/store";
 import {fileMetadataListSuccess, fileMetadataLoadSuccess} from "./file-metadata.actions";
 import {FileMetadataState} from "./file-metadata.state";
 
@@ -6,9 +6,9 @@ export const initialState: FileMetadataState = {
     fileMetadata: [],
 };
 
-const onIncomingFileMetadata = (state, action) => {
+const onIncomingFileMetadata = (state: FileMetadataState, action: Action) => {
     return {
-        fileMetadata: action.payload,
+        fileMetadata: (action as any).payload,
     };
 };
 

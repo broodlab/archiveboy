@@ -10,7 +10,7 @@ const onSelectDirectory = () => ({
     directorySelectionInProgress: true,
 });
 
-const onDirectorySelectionSucceeded = (state) => state;
+const onDirectorySelectionSucceeded = (state: ApplicationState) => state;
 
 const onDirectorySelectionFinalized = () => ({
     directorySelectionInProgress: false,

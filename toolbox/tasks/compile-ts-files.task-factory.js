@@ -3,7 +3,7 @@ const log = require("fancy-log");
 
 const createCompileTsFilesTask = (moduleName, webpackConfigFileName, failAfterError) =>
     function compileTsFiles(done) {
-        exec(`webpack --colors --mode=development --config=${__dirname}/../configs/webpack/${webpackConfigFileName}`, (err, stdout) => {
+        exec(`webpack --color --mode=development --config=${__dirname}/../configs/webpack/${webpackConfigFileName}`, (err, stdout) => {
             log(`${moduleName}: Compiling TypeScript files.`);
             log(stdout);
             if (failAfterError) {

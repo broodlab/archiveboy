@@ -6,7 +6,7 @@ import {map} from "rxjs/operators";
 
 @Injectable()
 export class FileMetadataService {
-    async listMetadataOfFilesInDirectory(directoryPath): Promise<string[]> {
+    async listMetadataOfFilesInDirectory(directoryPath: string): Promise<string[]> {
         await api.clearFileMetadata();
         const fileMetadata = await api.listMetadataOfFilesInDirectory(directoryPath);
         await api.storeFileMetadata(fileMetadata);

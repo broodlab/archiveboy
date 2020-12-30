@@ -18,17 +18,17 @@
         "uplate": "ncu -u"
     },
     "devDependencies": {
-        "@archiveboy/toolbox": "^0.0.1",
-        "electron": "^10.1.2",
-        "electron-builder": "^22.8.1",
-        "electron-webpack": "^2.8.2",
-        "wait-on": "^5.2.0"
+        "@archiveboy/toolbox": "~0.0.1",
+        "electron": "~11.1.1",
+        "electron-builder": "~22.9.1",
+        "electron-webpack": "~2.8.2",
+        "wait-on": "~5.2.1"
     },
     "dependencies": {
-        "@archiveboy/api": "^0.0.1",
-        "@archiveboy/api-local": "^0.0.1",
-        "electron-devtools-installer": "^3.1.1",
-        "sqlite3": "^5.0.0",
-        "typeorm": "0.2.26"
+        "@archiveboy/api": "~0.0.1",
+        "@archiveboy/api-local": "~0.0.1",
+        "electron-devtools-installer": "~3.1.1",
+        "sqlite3": "~5.0.0",
+        "typeorm": "~0.2.29"
     }
 }

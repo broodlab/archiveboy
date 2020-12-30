@@ -1,15 +1,22 @@
 {
     "extends": "./node_modules/@archiveboy/toolbox/configs/typescript/tsconfig.json",
     "angularCompilerOptions": {
-        "fullTemplateTypeCheck": true,
-        "strictInjectionParameters": true
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
     },
     "compilerOptions": {
         "baseUrl": ".",
+        "downlevelIteration": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
         "importHelpers": true,
-        "lib": ["dom", "es2018"]
+        "lib": ["dom", "es2018"],
+        "module": "es2020",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "strict": true
     },
     "files": ["src/main/index.ts", "src/main/polyfills.ts"],
     "include": ["src/main/**/*.d.ts"]

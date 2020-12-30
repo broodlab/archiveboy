@@ -7,5 +7,5 @@ import {Component, Input} from "@angular/core";
 })
 export class FileListComponent {
     @Input()
-    files: string[];
+    files: string[] | null = [];
 }

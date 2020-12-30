@@ -2,6 +2,7 @@
     "name": "@archiveboy/api",
     "version": "0.0.1",
     "main": "dist/main.js",
+    "typings": "dist/index.d.ts",
     "scripts": {
         "build": "gulp build --color",
         "lint": "gulp lint --color",
